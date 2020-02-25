@@ -6,15 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/2 | HKD</title>
+  <title>Data structure notes | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HKD">
-<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
+  <meta name="description" content="Data structure notesWhat is the data structureData structure is a particular way of organizing data in computers so that it could be used effectively. The goal of programmer is to choose the best data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data structure notes">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/Data-structure-notes/index.html">
 <meta property="og:site_name" content="HKD">
+<meta property="og:description" content="Data structure notesWhat is the data structureData structure is a particular way of organizing data in computers so that it could be used effectively. The goal of programmer is to choose the best data">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://media.geeksforgeeks.org/wp-content/uploads/array-2.png">
+<meta property="og:image" content="https://www.geeksforgeeks.org/wp-content/uploads/HashingDataStructure-min-768x384.png">
+<meta property="og:image" content="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png">
+<meta property="og:image" content="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/stack.png">
+<meta property="og:image" content="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/02/Queue.png">
+<meta property="og:image" content="https://www.geeksforgeeks.org/wp-content/uploads/binary-tree-to-DLL.png">
+<meta property="og:image" content="https://www.geeksforgeeks.org/wp-content/uploads/MinHeapAndMaxHeap.png">
+<meta property="og:image" content="https://www.geeksforgeeks.org/wp-content/uploads/undirectedgraph.png">
+<meta property="article:published_time" content="2020-02-25T03:38:58.000Z">
+<meta property="article:modified_time" content="2020-02-25T03:53:18.375Z">
 <meta property="article:author" content="Haokun Dong">
+<meta property="article:tag" content="data structure">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://media.geeksforgeeks.org/wp-content/uploads/array-2.png">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -140,36 +154,317 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Data-structure-notes" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/24/Data-structure-notes/" class="archive-article-date">
-  	<time datetime="2020-02-25T03:38:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/24/Data-structure-notes/">Data structure notes</a>
+    <h1 class="article-title" itemprop="name">
+      Data structure notes
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/02/24/Data-structure-notes/" class="archive-article-date">
+  	<time datetime="2020-02-25T03:38:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Data-structure-notes"><a href="#Data-structure-notes" class="headerlink" title="Data structure notes"></a>Data structure notes</h1><p><strong>What is the data structure</strong><br>Data structure is a particular way of organizing data in computers so that it could be used effectively. The goal of programmer is to choose the best data structure for current problems.</p>
+<p><strong>Why we need data structure ?</strong><br>Data is the key component of program. No matter what program you are working with, you need to deal with data. In different scenarios, we a specific way to store data, there different types of data structure could meet our needs.</p>
+<a id="more"></a>
+
+
+<p><strong>Common data structures</strong></p>
+<ul>
+<li><a href="#Arrays">Arrays</a></li>
+<li><a href="#Hash-Tables">Hash Tables</a></li>
+<li><a href="#Linked-Lists">Linked Lists</a></li>
+<li><a href="Stacks">Stacks</a></li>
+<li><a href="Queues">Queues</a></li>
+<li><a href="Trees">Trees</a></li>
+<li><a href="Graphs">Graphs</a></li>
+</ul>
+<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><p>Arrays is the most simple and the most common data structure. An array is a collection of items stored in contiguous memory locations. Each element could be uniquely identified by their index.</p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/array-2.png" alt="" title="Arrays"></p>
+<p>There two kinds of arrays based on the dimensionality:</p>
+<ul>
+<li>One-dimensional array</li>
+<li>Muti-dimensional array (elements of the array are arrays)</li>
+</ul>
+<br />
+
+<p><strong>Operations</strong></p>
+<ul>
+<li>Insert O(n) - insert the element in certain position</li>
+<li>Lookup O(1)- read the element in certain position</li>
+<li>Delete O(n) - delete the element in certain position</li>
+<li>Push O(1) - push an element to the end of the array</li>
+</ul>
+<br />
+
+<h3 id="Pros-and-Cons"><a href="#Pros-and-Cons" class="headerlink" title="Pros and Cons"></a>Pros and Cons</h3><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fast lookup</td>
+<td>Slow insert</td>
+</tr>
+<tr>
+<td>Fast push/pop</td>
+<td>Slow delete</td>
+</tr>
+<tr>
+<td>Ordered</td>
+<td>Fixed size(if using static array)</td>
+</tr>
+<tr>
+<td>Slow insert and slow delete because we need to shift the whole array after those operations.</td>
+<td></td>
+</tr>
+</tbody></table>
+<br />
+
+<h2 id="Hash-Tables"><a href="#Hash-Tables" class="headerlink" title="Hash Tables"></a>Hash Tables</h2><p>Hash function is a function which is used to map a given value with a particular key for faster access of elements.</p>
+<p>A hash table is a data structure that is used to store keys/value pairs. It uses a hash function to compute an index into an array in which an element will be inserted or searched. </p>
+<p><img src="https://www.geeksforgeeks.org/wp-content/uploads/HashingDataStructure-min-768x384.png" alt="" title="Hash"></p>
+<p><strong>Operations</strong></p>
+<ul>
+<li>Insert O(1) </li>
+<li>Lookup O(1)</li>
+<li>Delete O(1) </li>
+<li>Search O(1) - To search something in our basket, simply use hash function</li>
+</ul>
+<p><strong>Hash Collisions</strong><br>A collision might occur when two or more elements are mapped to the same value.</p>
+<p>The best way to avoid collision is to use a good hash function that distributes elements uniformly over the hash table. There also various collision resolution techniques like open hashing, closed hashing, double hashing, etc.</p>
+<h3 id="Pros-and-Cons-1"><a href="#Pros-and-Cons-1" class="headerlink" title="Pros and Cons"></a>Pros and Cons</h3><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fast lookup</td>
+<td>Slow key iterations</td>
+</tr>
+<tr>
+<td>Fast push/pop</td>
+<td>Unordered</td>
+</tr>
+<tr>
+<td>Flexible keys</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Slow key iterations means that if we want to grab all keys we need to the entire memory space.</p>
+<br />
+
+<h2 id="Linked-Lists"><a href="#Linked-Lists" class="headerlink" title="Linked Lists"></a>Linked Lists</h2><p>A linked list is a linear data structure, a linked list consist of notes where each node contains a data field and there is a link to the next node in the list.</p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png" alt="" title="Linked-lists"><br><strong>Operations</strong></p>
+<ul>
+<li>Preappend O(1) </li>
+<li>Append O(1) </li>
+<li>Lookup O(n)</li>
+<li>Insert O(n) </li>
+<li>Delete O(n) </li>
+</ul>
+<h3 id="Pros-and-Cons-2"><a href="#Pros-and-Cons-2" class="headerlink" title="Pros and Cons"></a>Pros and Cons</h3><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fast insertion</td>
+<td>Slow lookup</td>
+</tr>
+<tr>
+<td>Fast deletion</td>
+<td>More memory</td>
+</tr>
+<tr>
+<td>Flexible size</td>
+<td></td>
+</tr>
+<tr>
+<td>Ordered</td>
+<td></td>
+</tr>
+</tbody></table>
+<br />
+
+<h2 id="Stacks"><a href="#Stacks" class="headerlink" title="Stacks"></a>Stacks</h2><p>Stacks is a linear data structure follows a particular order for operations. The order is Last In First Out(LIFO).<br><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/stack.png" alt="" title="Stacks"></p>
+<p><strong>Operations</strong></p>
+<ul>
+<li>Pop O(1) - Remove the last element</li>
+<li>Push O(1) </li>
+<li>Lookup O(n)</li>
+<li>Peek O(1) - View the top element</li>
+</ul>
+<h3 id="Pros-and-Cons-3"><a href="#Pros-and-Cons-3" class="headerlink" title="Pros and Cons"></a>Pros and Cons</h3><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fast operation</td>
+<td>Slow lookup</td>
+</tr>
+<tr>
+<td>Fast peek</td>
+<td></td>
+</tr>
+<tr>
+<td>Ordered</td>
+<td></td>
+</tr>
+</tbody></table>
+<br />
+
+<h2 id="Queues"><a href="#Queues" class="headerlink" title="Queues"></a>Queues</h2><p>A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO).<br><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/02/Queue.png" alt="" title="Queues"></p>
+<p><strong>Operations</strong></p>
+<ul>
+<li>Enqueue O(1) </li>
+<li>Dequeue O(1) - Remove the first element</li>
+<li>Lookup O(n)</li>
+<li>Peek O(1) - View the top element</li>
+</ul>
+<h3 id="Pros-and-Cons-4"><a href="#Pros-and-Cons-4" class="headerlink" title="Pros and Cons"></a>Pros and Cons</h3><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fast operation</td>
+<td>Slow lookup</td>
+</tr>
+<tr>
+<td>Fast peek</td>
+<td></td>
+</tr>
+<tr>
+<td>Ordered</td>
+<td></td>
+</tr>
+</tbody></table>
+<br />
+
+<h2 id="Trees"><a href="#Trees" class="headerlink" title="Trees"></a>Trees</h2><p>A tree is a nonlinear data type that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.</p>
+<p><strong>Binary Trees</strong><br>A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.</p>
+<p><img src="https://www.geeksforgeeks.org/wp-content/uploads/binary-tree-to-DLL.png" alt="" title="BT"></p>
+<p>The number of nodes doubled down the tree levels. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># of nodes  &#x3D; 2^height - 1</span><br><span class="line">log nodes &#x3D; height</span><br></pre></td></tr></table></figure>
+
+<p><strong>Balanced BST Operations</strong></p>
+<ul>
+<li>Lookup O(logN)</li>
+<li>Insert O(logN)</li>
+<li>Delete O(logN)</li>
+</ul>
+<p><strong>UnBalanced BST Operations</strong></p>
+<ul>
+<li>Lookup O(N)</li>
+<li>Insert O(N)</li>
+<li>Delete O(N)</li>
+</ul>
+<h3 id="BST-Pros-and-Cons"><a href="#BST-Pros-and-Cons" class="headerlink" title="BST Pros and Cons"></a>BST Pros and Cons</h3><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Better then O(n)</td>
+<td>No O(1) operations</td>
+</tr>
+<tr>
+<td>Flexible size</td>
+<td></td>
+</tr>
+<tr>
+<td>Ordered</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Heap</strong><br>Heap is a tree-based data structure where that is a complete binary tree.</p>
+<ul>
+<li>Max-Heap: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children.</li>
+<li>Min-Heap: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children.<br><img src="https://www.geeksforgeeks.org/wp-content/uploads/MinHeapAndMaxHeap.png" alt="" title="Heap"></li>
+</ul>
+<p><strong>Operations</strong></p>
+<ul>
+<li>Insert O(logN) </li>
+<li>Delete O(logN)</li>
+<li>Lookup O(n)</li>
+</ul>
+<h3 id="Binary-Heap-Pros-and-Cons"><a href="#Binary-Heap-Pros-and-Cons" class="headerlink" title="Binary Heap Pros and Cons"></a>Binary Heap Pros and Cons</h3><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Better then O(n)</td>
+<td>No O(1) operations</td>
+</tr>
+<tr>
+<td>Flexible size</td>
+<td>Slow lookup</td>
+</tr>
+<tr>
+<td>Fast insert</td>
+<td></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td></td>
+</tr>
+</tbody></table>
+<br />
+
+<h2 id="Graphs"><a href="#Graphs" class="headerlink" title="Graphs"></a>Graphs</h2><p>A Graph is a non-linear data structure consisting of nodes and edges. A Graph consists of a finite set of vertices(or nodes) and set of Edges which connect a pair of nodes. </p>
+<p><img src="https://www.geeksforgeeks.org/wp-content/uploads/undirectedgraph.png" alt="" title="Graphs"></p>
+<ul>
+<li>Directed or Undirected</li>
+<li>Weighted or Unweighted</li>
+<li>Cyclic or Acyclic</li>
+</ul>
+<h3 id="Pros-and-Cons-5"><a href="#Pros-and-Cons-5" class="headerlink" title="Pros and Cons"></a>Pros and Cons</h3><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Relationships</td>
+<td>Scaling is hard</td>
+</tr>
+</tbody></table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -181,99 +476,55 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/" class="archive-article-date">
-  	<time datetime="2020-02-24T02:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">How to make website like this on Windows II</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/">How to make website like this on Windows II</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/How%20to%20make%20website%20like%20this%20on%20Windows/" class="archive-article-date">
-  	<time datetime="2020-02-23T19:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/How%20to%20make%20website%20like%20this%20on%20Windows/">How to make website like this on Windows</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -296,8 +547,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
