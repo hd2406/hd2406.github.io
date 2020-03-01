@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>How to make website like this on Windows | HKD</title>
+  <title>RESTful basics | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo blog frameworkHexo is a fast, simple &amp; powerful blog framework.   Incredible generating speed powered by Node.js All features of GitHub Flavored Markdown are supported, including most Octopre">
+  <meta name="description" content="RESTful Routes basicsWhat is REST?REST (representational state transfer) which provides a way of mapping HTTP verbs ( get, post, put, delete) and CRUD actions (create, read, update, delete) together.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to make website like this on Windows">
-<meta property="og:url" content="http://yoursite.com/2020/02/23/How%20to%20make%20website%20like%20this%20on%20Windows/index.html">
+<meta property="og:title" content="RESTful basics">
+<meta property="og:url" content="http://yoursite.com/2020/03/01/RESTful-basics/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Hexo blog frameworkHexo is a fast, simple &amp; powerful blog framework.   Incredible generating speed powered by Node.js All features of GitHub Flavored Markdown are supported, including most Octopre">
+<meta property="og:description" content="RESTful Routes basicsWhat is REST?REST (representational state transfer) which provides a way of mapping HTTP verbs ( get, post, put, delete) and CRUD actions (create, read, update, delete) together.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-23T19:58:31.000Z">
-<meta property="article:modified_time" content="2020-02-26T02:34:40.808Z">
+<meta property="article:published_time" content="2020-03-01T18:53:21.000Z">
+<meta property="article:modified_time" content="2020-03-01T18:54:11.983Z">
 <meta property="article:author" content="Haokun Dong">
-<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="RESTful">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
@@ -145,65 +145,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-How to make website like this on Windows" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-RESTful-basics" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      How to make website like this on Windows
+      RESTful basics
     </h1>
   
 
         
-        <a href="/2020/02/23/How%20to%20make%20website%20like%20this%20on%20Windows/" class="archive-article-date">
-  	<time datetime="2020-02-23T19:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
+        <a href="/2020/03/01/RESTful-basics/" class="archive-article-date">
+  	<time datetime="2020-03-01T18:53:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hexo-blog-framework"><a href="#Hexo-blog-framework" class="headerlink" title="Hexo blog framework"></a>Hexo blog framework</h1><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> is a fast, simple &amp; powerful blog framework. </p>
+        <h1 id="RESTful-Routes-basics"><a href="#RESTful-Routes-basics" class="headerlink" title="RESTful Routes basics"></a>RESTful Routes basics</h1><h2 id="What-is-REST"><a href="#What-is-REST" class="headerlink" title="What is REST?"></a>What is REST?</h2><p><strong>REST</strong> (representational state transfer) which provides a way of mapping HTTP verbs ( get, post, put, delete) and <strong>CRUD</strong> actions (create, read, update, delete) together.</p>
+<p>&lt;–!more–&gt;</p>
+<p>Whenever you navigate through a site by clicking links, you’re making a state transition which brings you to the next page (the next state of application) and by following this simple model of clicking from page to page you’re following the REST principles and when something follows the rest principle it is known as RESTFUL.</p>
+<p>So, Restful routes is just a conventional pattern to follow when structuring different routes for interacting with the server whenever an HTTP request is made by the client. And for a route to be completely restful it must do the following:</p>
 <ul>
-<li>Incredible generating speed powered by Node.js</li>
-<li>All features of GitHub Flavored Markdown are supported, including most Octopress plugins.</li>
-<li>One command to deploy your site to GitHub Pages</li>
-<li>Features powerful APIs for limitless extensibility.</li>
+<li>Seperate the client from the server</li>
+<li>Not hold state between requests (i.e all information necessary to respond to a request is available in each individual request: no data or state, is held by the server from request to request)</li>
+<li>Use HTTP and HTTP methods</li>
+<li>Be reliable (for e.g most APIs follow the restful route pattern when specifying the process for authentication and important URLs)</li>
 </ul>
-<a id="more"></a>
+<p>There are like 7 different restful routes pattern to follow when creating an application or web service that will interact with the server, for e.g lets look at the 7 routes that can exist in a blog website:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">|   NAME   |     PATH       |   HTTP VERB     |            PURPOSE                   |</span><br><span class="line">|----------|----------------|-----------------|--------------------------------------| </span><br><span class="line">| Index    | &#x2F;blog          |      GET        | Displays all blog post               |</span><br><span class="line">| New      | &#x2F;blog&#x2F;new      |      GET        | Shows new form for new blog entry    |</span><br><span class="line">| Create   | &#x2F;blog          |      POST       | Creates a new blog post              |</span><br><span class="line">| Show     | &#x2F;blog&#x2F;:id      |      GET        | Shows one specified blog post        |</span><br><span class="line">| Edit     | &#x2F;blog&#x2F;:id&#x2F;edit |      GET        | Shows edit form for one blog post    |</span><br><span class="line">| Update   | &#x2F;blog&#x2F;:id      |      PUT        | Updates a particular blog post       |</span><br><span class="line">| Destroy  | &#x2F;blog&#x2F;:id      |      DELETE     | Deletes a particular blog post       |</span><br></pre></td></tr></table></figure>
 
-<h3 id="Tech"><a href="#Tech" class="headerlink" title="Tech"></a>Tech</h3><p>Hexo uses a number of open source projects to work properly:</p>
-<ul>
-<li><a href="http://nodejs.org" target="_blank" rel="noopener">node.js</a> - evented I/O for the backend</li>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-</ul>
-<h3 id="Installation-Nodejs"><a href="#Installation-Nodejs" class="headerlink" title="Installation - Nodejs"></a>Installation - Nodejs</h3><p>Hexo requires <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>. Should be at least Node.js 8.10, recommends 10.0 or higher.</p>
-<p>In a web browser, navigate to <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>. Click the Windows Installer button to download the latest default version.</p>
-<p>The npm is also installed. (npm is a package manager for the JavaScript programming language)</p>
-<p>After you finished installing, use the following commands to check:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-
-<p>For installing Hexo…</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<h3 id="Installation-Git"><a href="#Installation-Git" class="headerlink" title="Installation - Git"></a>Installation - Git</h3><p>Windows: Download &amp; install <a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>.</p>
-<h3 id="Start-to-build-the-blog"><a href="#Start-to-build-the-blog" class="headerlink" title="Start to build the blog"></a>Start to build the blog</h3><p>First we need to create a new folder, let’s just call it <em>blog</em>.</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
-
-<p>Now we are able to use Hexo to generate a blog in this directory</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<p>And then use this command to start the server</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-<p> Hexo is running at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<p> Those are some useful hexo commands:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s <span class="comment"># start the local server</span></span><br><span class="line">$ hexo clean <span class="comment"># Cleans the cache file (db.json) and generated files (public)</span></span><br><span class="line">$ hexo g <span class="comment"># Generates static files</span></span><br><span class="line">$ hexo new [post name] <span class="comment"># generate new post</span></span><br><span class="line">$ hexo deploy <span class="comment"># Deploy after generation finishes</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<p><strong>Free Software, Hell Yeah!</strong></p>
+<p>The above table clearly shows the mapping between the HTTP verb and the CRUD actions which follows the above explained restful route patterns. You’d want to have an action to create a new post (new route), to display one post (show route), to display all posts (index route), to delete a post (delete route), and a page to edit a post (edit route).</p>
+<p>This different route patterns just displays a blue print for us to follow when creating any restful web services or applications or even when building our own APIs. It is a conventional and widely used pattern that you necessarily do not have to follow if you don’t want to.</p>
 
       
 
@@ -217,7 +193,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RESTful</a>
         		</li>
       		
 		</ul>
@@ -236,15 +212,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          How to make website like this on Windows II
-        
-      </div>
-    </a>
   
+    <a href="/2020/02/29/MongoDB-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MongoDB note</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

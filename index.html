@@ -142,6 +142,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-RESTful-basics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/01/RESTful-basics/">RESTful basics</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/01/RESTful-basics/" class="archive-article-date">
+  	<time datetime="2020-03-01T18:53:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="RESTful-Routes-basics"><a href="#RESTful-Routes-basics" class="headerlink" title="RESTful Routes basics"></a>RESTful Routes basics</h1><h2 id="What-is-REST"><a href="#What-is-REST" class="headerlink" title="What is REST?"></a>What is REST?</h2><p><strong>REST</strong> (representational state transfer) which provides a way of mapping HTTP verbs ( get, post, put, delete) and <strong>CRUD</strong> actions (create, read, update, delete) together.</p>
+<p>&lt;–!more–&gt;</p>
+<p>Whenever you navigate through a site by clicking links, you’re making a state transition which brings you to the next page (the next state of application) and by following this simple model of clicking from page to page you’re following the REST principles and when something follows the rest principle it is known as RESTFUL.</p>
+<p>So, Restful routes is just a conventional pattern to follow when structuring different routes for interacting with the server whenever an HTTP request is made by the client. And for a route to be completely restful it must do the following:</p>
+<ul>
+<li>Seperate the client from the server</li>
+<li>Not hold state between requests (i.e all information necessary to respond to a request is available in each individual request: no data or state, is held by the server from request to request)</li>
+<li>Use HTTP and HTTP methods</li>
+<li>Be reliable (for e.g most APIs follow the restful route pattern when specifying the process for authentication and important URLs)</li>
+</ul>
+<p>There are like 7 different restful routes pattern to follow when creating an application or web service that will interact with the server, for e.g lets look at the 7 routes that can exist in a blog website:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">|   NAME   |     PATH       |   HTTP VERB     |            PURPOSE                   |</span><br><span class="line">|----------|----------------|-----------------|--------------------------------------| </span><br><span class="line">| Index    | &#x2F;blog          |      GET        | Displays all blog post               |</span><br><span class="line">| New      | &#x2F;blog&#x2F;new      |      GET        | Shows new form for new blog entry    |</span><br><span class="line">| Create   | &#x2F;blog          |      POST       | Creates a new blog post              |</span><br><span class="line">| Show     | &#x2F;blog&#x2F;:id      |      GET        | Shows one specified blog post        |</span><br><span class="line">| Edit     | &#x2F;blog&#x2F;:id&#x2F;edit |      GET        | Shows edit form for one blog post    |</span><br><span class="line">| Update   | &#x2F;blog&#x2F;:id      |      PUT        | Updates a particular blog post       |</span><br><span class="line">| Destroy  | &#x2F;blog&#x2F;:id      |      DELETE     | Deletes a particular blog post       |</span><br></pre></td></tr></table></figure>
+
+<p>The above table clearly shows the mapping between the HTTP verb and the CRUD actions which follows the above explained restful route patterns. You’d want to have an action to create a new post (new route), to display one post (show route), to display all posts (index route), to delete a post (delete route), and a page to edit a post (edit route).</p>
+<p>This different route patterns just displays a blue print for us to follow when creating any restful web services or applications or even when building our own APIs. It is a conventional and widely used pattern that you necessarily do not have to follow if you don’t want to.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RESTful</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/01/RESTful-basics/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MongoDB-note" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -735,15 +823,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Data Structure</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Data Structure</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RESTful</a>
               </li>
              
               <li class="article-tag-list-item">
