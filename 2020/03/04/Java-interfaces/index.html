@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/3 | HKD</title>
+  <title>Java interfaces | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HKD">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
+  <meta name="description" content="Java - InterfacesDefinitionJava interfaces is a reference type. It is similar to a class, it is a collection of abstruct methods. A class can implement an interface and inherit those abstruct methods">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java interfaces">
+<meta property="og:url" content="http://yoursite.com/2020/03/04/Java-interfaces/index.html">
 <meta property="og:site_name" content="HKD">
+<meta property="og:description" content="Java - InterfacesDefinitionJava interfaces is a reference type. It is similar to a class, it is a collection of abstruct methods. A class can implement an interface and inherit those abstruct methods">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-05T02:38:03.000Z">
+<meta property="article:modified_time" content="2020-03-05T02:38:31.871Z">
 <meta property="article:author" content="Haokun Dong">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
@@ -140,36 +145,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java-interfaces" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java interfaces
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/04/Java-interfaces/" class="archive-article-date">
+
+        
+        <a href="/2020/03/04/Java-interfaces/" class="archive-article-date">
   	<time datetime="2020-03-05T02:38:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/04/Java-interfaces/">Java interfaces</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java-Interfaces"><a href="#Java-Interfaces" class="headerlink" title="Java - Interfaces"></a>Java - Interfaces</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>Java interfaces is a reference type. It is similar to a class, it is a collection of abstruct methods. A class can implement an interface and inherit those abstruct methods of the interface.</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="Interface-vs-Class"><a href="#Interface-vs-Class" class="headerlink" title="Interface vs Class"></a>Interface vs Class</h2><table>
+<thead>
+<tr>
+<th>Similarity</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Contain any number of methods</td>
+<td>Cannot instantiate an interface.</td>
+</tr>
+<tr>
+<td>Written in a file with a .java extension</td>
+<td>Does not contain any constructors</td>
+</tr>
+<tr>
+<td>Byte code of an interface appears in a .class file</td>
+<td>All of the methods in an interface are abstract</td>
+</tr>
+<tr>
+<td>Appear in packages, and their corresponding bytecode file must be in a directory structure that matches the package name</td>
+<td>Cannot contain instance fields. must be declared both static and final.</td>
+</tr>
+</tbody></table>
+<p>An interface is not extended by a class; it is implemented by a class.</p>
+<p>An interface can extend multiple interfaces.</p>
+<h2 id="Implementing-Interfaces"><a href="#Implementing-Interfaces" class="headerlink" title="Implementing Interfaces"></a>Implementing Interfaces</h2><p>When a class implements an interface, you can think of the class as signing a contract, agreeing to perform the specific behaviors of the interface. If a class does not perform all the behaviors of the interface, the class must declare itself as abstract.</p>
+<p>When implementation interfaces, there are several rules −</p>
+<ul>
+<li>A class can implement more than one interface at a time.</li>
+<li>A class can extend only one class, but implement many interfaces.</li>
+<li>An interface can extend another interface, in a similar way as a class can extend another class.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface Animal &#123;</span><br><span class="line">   public void eat();</span><br><span class="line">   public void travel();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class MammalInt implements Animal &#123;</span><br><span class="line"></span><br><span class="line">   public void eat() &#123;</span><br><span class="line">      System.out.println(&quot;Mammal eats&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void travel() &#123;</span><br><span class="line">      System.out.println(&quot;Mammal travels&quot;);</span><br><span class="line">   &#125; </span><br><span class="line"></span><br><span class="line">   public int noOfLegs() &#123;</span><br><span class="line">      return 0;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String args[]) &#123;</span><br><span class="line">      MammalInt m &#x3D; new MammalInt();</span><br><span class="line">      m.eat();</span><br><span class="line">      m.travel();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Extending-Interfaces"><a href="#Extending-Interfaces" class="headerlink" title="Extending Interfaces"></a>Extending Interfaces</h3><p>An interface can extend another interface in the same way that a class can extend another class. The extends keyword is used to extend an interface, and the child interface inherits the methods of the parent interface.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Filename: Sports.java</span><br><span class="line">public interface Sports &#123;</span><br><span class="line">   public void setHomeTeam(String name);</span><br><span class="line">   public void setVisitingTeam(String name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Filename: Football.java</span><br><span class="line">public interface Football extends Sports &#123;</span><br><span class="line">   public void homeTeamScored(int points);</span><br><span class="line">   public void visitingTeamScored(int points);</span><br><span class="line">   public void endOfQuarter(int quarter);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Filename: Hockey.java</span><br><span class="line">public interface Hockey extends Sports &#123;</span><br><span class="line">   public void homeGoalScored();</span><br><span class="line">   public void visitingGoalScored();</span><br><span class="line">   public void endOfPeriod(int period);</span><br><span class="line">   public void overtimePeriod(int ot);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface Hockey extends Sports, Event</span><br></pre></td></tr></table></figure>
+
+<h3 id="Why-we-need-interfaces"><a href="#Why-we-need-interfaces" class="headerlink" title="Why we need interfaces?"></a>Why we need interfaces?</h3><p>The interface can independently inherit from an interface or class without paying attention to the implementation of its peripheral classes, which makes the extension class or interface more flexible, and the granularity of control can be finer!</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -181,179 +230,55 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/03/Java-Spring-Bean/" class="archive-article-date">
-  	<time datetime="2020-03-04T03:57:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/03/Java-Spring-Bean/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java Spring Bean</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/03/Java-Spring-Bean/">Java Spring Bean</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/02/Maven-notes/" class="archive-article-date">
-  	<time datetime="2020-03-03T03:01:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/02/Maven-notes/">Maven notes</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/Algorithm-Recursion/" class="archive-article-date">
-  	<time datetime="2020-03-02T03:29:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/Algorithm-Recursion/">Algorithm Recursion</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Recursion</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/RESTful-basics/" class="archive-article-date">
-  	<time datetime="2020-03-01T18:53:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/RESTful-basics/">RESTful basics</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RESTful</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -376,8 +301,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
