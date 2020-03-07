@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java Spring Bean | HKD</title>
+  <title>Java Constructors | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Bean in Java SpringDefinitionIn Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiat">
-<meta name="keywords" content="Java,Spring">
+  <meta name="description" content="Constructors in JavaConstructors are used to initialize the object’s state and assign values to the class variables at the time of object creation, either explicitly done by the programmer or by Java">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java Spring Bean">
-<meta property="og:url" content="http://yoursite.com/2020/03/03/Java-Spring-Bean/index.html">
+<meta property="og:title" content="Java Constructors">
+<meta property="og:url" content="http://yoursite.com/2020/03/06/Java-Constructors/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Bean in Java SpringDefinitionIn Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiat">
+<meta property="og:description" content="Constructors in JavaConstructors are used to initialize the object’s state and assign values to the class variables at the time of object creation, either explicitly done by the programmer or by Java">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-04T03:58:31.703Z">
+<meta property="og:updated_time" content="2020-03-07T04:20:57.773Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Spring Bean">
-<meta name="twitter:description" content="Bean in Java SpringDefinitionIn Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiat">
+<meta name="twitter:title" content="Java Constructors">
+<meta name="twitter:description" content="Constructors in JavaConstructors are used to initialize the object’s state and assign values to the class variables at the time of object creation, either explicitly done by the programmer or by Java">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -145,45 +145,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java-Spring-Bean" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java-Constructors" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java Spring Bean
+      Java Constructors
     </h1>
   
 
         
-        <a href="/2020/03/03/Java-Spring-Bean/" class="archive-article-date">
-  	<time datetime="2020-03-04T03:57:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
+        <a href="/2020/03/06/Java-Constructors/" class="archive-article-date">
+  	<time datetime="2020-03-07T04:20:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Bean-in-Java-Spring"><a href="#Bean-in-Java-Spring" class="headerlink" title="Bean in Java Spring"></a>Bean in Java Spring</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.</p>
+        <h1 id="Constructors-in-Java"><a href="#Constructors-in-Java" class="headerlink" title="Constructors in Java"></a>Constructors in Java</h1><p>Constructors are used to initialize the object’s state and assign values to the class variables at the time of object creation, either explicitly done by the programmer or by Java itself (default constructor).</p>
 <a id="more"></a>
+<h2 id="When-is-a-Constructor-called"><a href="#When-is-a-Constructor-called" class="headerlink" title="When is a Constructor called ?"></a>When is a Constructor called ?</h2><p>Each time an object is created using new() keyword at least one constructor (it could be default constructor) is invoked to assign initial values to the data members of the same class.</p>
+<h2 id="Rules-for-writing-Constructor"><a href="#Rules-for-writing-Constructor" class="headerlink" title="Rules for writing Constructor:"></a>Rules for writing Constructor:</h2><ul>
+<li>Constructor(s) of a class must has same name as the class name in which it resides.</li>
+<li>A constructor in Java can not be abstract, final, static and Synchronized.</li>
+<li>Access modifiers can be used in constructor declaration to control its access i.e which other class can call the constructor.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Geek</span><br><span class="line">&#123;   </span><br><span class="line">  .......</span><br><span class="line"></span><br><span class="line">  // A Constructor</span><br><span class="line">  new Geek() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  .......</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// We can create an object of the above class</span><br><span class="line">// using the below statement. This statement</span><br><span class="line">// calls above constructor.</span><br><span class="line">Geek obj = new Geek();</span><br></pre></td></tr></table></figure>
 
-<h2 id="IoC-Inversion-of-Control"><a href="#IoC-Inversion-of-Control" class="headerlink" title="IoC - Inversion of Control"></a>IoC - Inversion of Control</h2><p>Simply put, Inversion of Control, or IoC for short, is a process in which an object defines its dependencies without creating them. This object delegates the job of constructing such dependencies to an IoC container.</p>
-<h2 id="Traditional-Approach"><a href="#Traditional-Approach" class="headerlink" title="Traditional Approach"></a>Traditional Approach</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Assume we have a class declaration:</span><br><span class="line"></span><br><span class="line">public class Company &#123;</span><br><span class="line">    private Address address;</span><br><span class="line"> </span><br><span class="line">    public Company(Address address) &#123;</span><br><span class="line">        this.address = address;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    // getter, setter and other properties</span><br><span class="line">&#125;</span><br><span class="line">This class needs a collaborator of type Address:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class Address &#123;</span><br><span class="line">    private String street;</span><br><span class="line">    private int number;</span><br><span class="line"> </span><br><span class="line">    public Address(String street, int number) &#123;</span><br><span class="line">        this.street = street;</span><br><span class="line">        this.number = number;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    // getters and setters</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Normally, we create objects with their classes’ constructors:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Address address = new Address(&quot;High Street&quot;, 1000);</span><br><span class="line">Company company = new Company(address);</span><br></pre></td></tr></table></figure>
-
-<p>There’s nothing wrong with this approach, but wouldn’t it be nice to manage the dependencies in a better way?</p>
-<p>Imagine an application with dozens or even hundreds of classes. Sometimes we want to share a single instance of a class across the whole application, other times we need a separate object for each use case, and so on.</p>
-<p>Managing such a number of objects is nothing short of a nightmare. This is where Inversion of Control comes to the rescue.</p>
-<p>Instead of constructing dependencies by itself, an object can retrieve its dependencies from an IoC container. All we need to do is to provide the container with appropriate configuration metadata.</p>
-<h2 id="Bean-Configuration"><a href="#Bean-Configuration" class="headerlink" title="Bean Configuration"></a>Bean Configuration</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">public class Company &#123;</span><br><span class="line">    // this body is the same as before</span><br><span class="line">&#125;</span><br><span class="line">Here&apos;s a configuration class supplying bean metadata to an IoC container:</span><br><span class="line"></span><br><span class="line">@Configuration</span><br><span class="line">@ComponentScan(basePackageClasses = Company.class)</span><br><span class="line">public class Config &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public Address getAddress() &#123;</span><br><span class="line">        return new Address(&quot;High Street&quot;, 1000);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>The configuration class produces a bean of type Address. It also carries the @ComponentScan annotation, which instructs the container to looks for beans in the package containing the Company class.</p>
-<p>When a Spring IoC container constructs objects of those types, all the objects are called Spring beans as they are managed by the IoC container.</p>
-<p>Since we defined beans in a configuration class, we’ll need an instance of the AnnotationConfigApplicationContext class to build up a container:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);</span><br><span class="line">Company company = context.getBean(&quot;company&quot;, Company.class);</span><br><span class="line">assertEquals(&quot;High Street&quot;, company.getAddress().getStreet());</span><br><span class="line">assertEquals(1000, company.getAddress().getNumber());</span><br></pre></td></tr></table></figure>
+<h2 id="Types-of-constructor"><a href="#Types-of-constructor" class="headerlink" title="Types of constructor"></a>Types of constructor</h2><ul>
+<li><p>No-argument constructor: A constructor that has no parameter is known as default constructor. If we don’t define a constructor in a class, then compiler creates default constructor(with no arguments) for the class. And if we write a constructor with arguments or no-arguments then the compiler does not create a default constructor. Default constructor provides the default values to the object like 0, null, etc. depending on the type.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Geek </span><br><span class="line">&#123; </span><br><span class="line">    int num; </span><br><span class="line">    String name; </span><br><span class="line">  </span><br><span class="line">    // this would be invoked while an object </span><br><span class="line">    // of that class is created. </span><br><span class="line">    Geek() </span><br><span class="line">    &#123; </span><br><span class="line">        System.out.println(&quot;Constructor called&quot;); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Parameterized Constructor: A constructor that has parameters is known as parameterized constructor. If we want to initialize fields of the class with your own values, then use a parameterized constructor.\</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Geek </span><br><span class="line">&#123; </span><br><span class="line">    // data members of the class. </span><br><span class="line">    String name; </span><br><span class="line">    int id; </span><br><span class="line">  </span><br><span class="line">    // constructor would initialize data members </span><br><span class="line">    // with the values of passed arguments while </span><br><span class="line">    // object of that class created. </span><br><span class="line">    Geek(String name, int id) </span><br><span class="line">    &#123; </span><br><span class="line">        this.name = name; </span><br><span class="line">        this.id = id; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -197,10 +196,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
@@ -219,18 +214,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/04/Java-interfaces/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java interfaces
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/02/Maven-notes/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Maven notes</div>
+    <a href="/2020/03/05/Java-OOP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java OOP</div>
       <i class="icon-circle-right"></i>
     </a>
   
