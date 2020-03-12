@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>How to make website like this on Windows II | HKD</title>
+  <title>React State | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Deploy on GithubIn this section, we will talk about how to deploy our website on Github. 1.  Create a new repository Note: The name of repo must be as same as your username!">
-<meta name="keywords" content="Hexo,Git">
+  <meta name="description" content="React StateReact components has a built-in state object. The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.">
+<meta name="keywords" content="React">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to make website like this on Windows II">
-<meta property="og:url" content="http://yoursite.com/2020/02/23/How-to-make-website-like-this-on-Windows-II/index.html">
+<meta property="og:title" content="React State">
+<meta property="og:url" content="http://yoursite.com/2020/03/11/React-State/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Deploy on GithubIn this section, we will talk about how to deploy our website on Github. 1.  Create a new repository Note: The name of repo must be as same as your username!">
+<meta property="og:description" content="React StateReact components has a built-in state object. The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2020/02/23/How-to-make-website-like-this-on-Windows-II/favicon.png">
-<meta property="og:updated_time" content="2020-02-26T02:34:48.448Z">
+<meta property="og:updated_time" content="2020-03-12T02:50:26.679Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to make website like this on Windows II">
-<meta name="twitter:description" content="Deploy on GithubIn this section, we will talk about how to deploy our website on Github. 1.  Create a new repository Note: The name of repo must be as same as your username!">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/23/How-to-make-website-like-this-on-Windows-II/favicon.png">
+<meta name="twitter:title" content="React State">
+<meta name="twitter:description" content="React StateReact components has a built-in state object. The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -147,50 +145,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-How-to-make-website-like-this-on-Windows-II" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-React-State" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      How to make website like this on Windows II
+      React State
     </h1>
   
 
         
-        <a href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/" class="archive-article-date">
-  	<time datetime="2020-02-24T02:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
+        <a href="/2020/03/11/React-State/" class="archive-article-date">
+  	<time datetime="2020-03-12T02:49:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Deploy-on-Github"><a href="#Deploy-on-Github" class="headerlink" title="Deploy on Github"></a>Deploy on Github</h1><p>In this section, we will talk about how to deploy our website on Github.</p>
-<h3 id="1-Create-a-new-repository"><a href="#1-Create-a-new-repository" class="headerlink" title="1.  Create a new repository"></a>1.  Create a new repository</h3>
-<p>Note: The name of repo must be as same as your username!</p>
+        <h1 id="React-State"><a href="#React-State" class="headerlink" title="React State"></a>React State</h1><p>React components has a built-in state object.</p>
+<p>The <strong>state</strong> object is where you store property values that belongs to the component.</p>
+<p>When the <strong>state</strong> object changes, the component re-renders.</p>
 <a id="more"></a>
 
-<h3 id="2-Set-information-to-use-Git"><a href="#2-Set-information-to-use-Git" class="headerlink" title="2. Set information to use Git"></a>2. Set information to use Git</h3><ul>
-<li>Install hexo-deployer-git by nmp</li>
-<li>Then edit the information insides the file _config.yml as below</li>
+<h2 id="Understanding-ReactJS-State"><a href="#Understanding-ReactJS-State" class="headerlink" title="Understanding ReactJS State"></a>Understanding ReactJS State</h2><ul>
+<li>State is like a data store to the ReactJS component. It is mostly used to update the component when user performed some action like clicking button, typing some text, pressing some key, etc.</li>
+<li>React.Component is the base class for all class based ReactJS components. Whenever a class inherits the class React.Component it’s constructor will automatically assigns attribute state to the class with intial value is set to null. we can change it by overriding the method constructor.</li>
+<li>In many cases we need to update the state. To do that we have to use the method setState and directly assigning like this.state = {‘key’: ‘value’} is strictly prohibited.<br>Let’s try to use state concept in our component by changing a little code in above ReactJS component that we have created</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">~~~~~~~~~~~~~~~~~~ _config.yml ~~~~~~~~~~~~~~~~~~</span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:[your username]/[your username].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h1 id="Difference-of-Props-and-State"><a href="#Difference-of-Props-and-State" class="headerlink" title="Difference of Props and State."></a>Difference of Props and State.</h1><ul>
+<li>Props are immutable i.e. once set the props cannot be changed, while State is an observable object that is to be used to hold data that may change over time and to control the behavior after each change.</li>
+<li>States can only be used in Class Components while Props don’t have this limitation.</li>
+<li>While Props are set by the parent component, State is generally updated by event handlers. </li>
+</ul>
 
-<h3 id="3-Final-deployment"><a href="#3-Final-deployment" class="headerlink" title="3. Final deployment"></a>3. Final deployment</h3> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p> Note: username and passwords might be required during the deployment.</p>
-<p> Or setting your Git username for every repository on your computer</p>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"your username"</span></span><br></pre></td></tr></table></figure>
-
-<br>
-<br>
-<br>
-
-
-<p>https://[your username].github.io/<br> <strong>Done! You can get accsess to your personal blog now :)</strong></p>
-<img src="/2020/02/23/How-to-make-website-like-this-on-Windows-II/favicon.png" title="This is an image">
       
 
       
@@ -203,11 +193,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
         		</li>
       		
 		</ul>
@@ -226,18 +212,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/24/Data-structure-notes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Data structure notes
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/23/How to make website like this on Windows/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">How to make website like this on Windows</div>
+    <a href="/2020/03/10/Responsive-Transition/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Responsive Transition</div>
       <i class="icon-circle-right"></i>
     </a>
   
