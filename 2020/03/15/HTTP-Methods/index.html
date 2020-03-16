@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java interfaces | HKD</title>
+  <title>HTTP Methods | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java - InterfacesDefinitionJava interfaces is a reference type. It is similar to a class, it is a collection of abstruct methods. A class can implement an interface and inherit those abstruct methods">
-<meta name="keywords" content="Java">
+  <meta name="description" content="HTTP - MethodsThe Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. It is in the Transport Layer of OSI（Open System In">
+<meta name="keywords" content="HTTP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java interfaces">
-<meta property="og:url" content="http://yoursite.com/2020/03/04/Java-interfaces/index.html">
+<meta property="og:title" content="HTTP Methods">
+<meta property="og:url" content="http://yoursite.com/2020/03/15/HTTP-Methods/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Java - InterfacesDefinitionJava interfaces is a reference type. It is similar to a class, it is a collection of abstruct methods. A class can implement an interface and inherit those abstruct methods">
+<meta property="og:description" content="HTTP - MethodsThe Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. It is in the Transport Layer of OSI（Open System In">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-05T02:38:31.871Z">
+<meta property="og:updated_time" content="2020-03-16T01:20:33.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java interfaces">
-<meta name="twitter:description" content="Java - InterfacesDefinitionJava interfaces is a reference type. It is similar to a class, it is a collection of abstruct methods. A class can implement an interface and inherit those abstruct methods">
+<meta name="twitter:title" content="HTTP Methods">
+<meta name="twitter:description" content="HTTP - MethodsThe Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. It is in the Transport Layer of OSI（Open System In">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -145,72 +145,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java-interfaces" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-HTTP-Methods" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java interfaces
+      HTTP Methods
     </h1>
   
 
         
-        <a href="/2020/03/04/Java-interfaces/" class="archive-article-date">
-  	<time datetime="2020-03-05T02:38:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-04</time>
+        <a href="/2020/03/15/HTTP-Methods/" class="archive-article-date">
+  	<time datetime="2020-03-16T01:19:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java-Interfaces"><a href="#Java-Interfaces" class="headerlink" title="Java - Interfaces"></a>Java - Interfaces</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>Java interfaces is a reference type. It is similar to a class, it is a collection of abstruct methods. A class can implement an interface and inherit those abstruct methods of the interface.</p>
+        <h1 id="HTTP-Methods"><a href="#HTTP-Methods" class="headerlink" title="HTTP - Methods"></a>HTTP - Methods</h1><p>The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. It is in the Transport Layer of OSI（Open System Interconnection.</p>
+<p>The set of common methods for HTTP/1.1 is defined below and this set can be expanded based on requirements. These method names are case sensitive and they must be used in uppercase.</p>
 <a id="more"></a>
 
-<h2 id="Interface-vs-Class"><a href="#Interface-vs-Class" class="headerlink" title="Interface vs Class"></a>Interface vs Class</h2><table>
-<thead>
-<tr>
-<th>Similarity</th>
-<th>Difference</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Contain any number of methods</td>
-<td>Cannot instantiate an interface.</td>
-</tr>
-<tr>
-<td>Written in a file with a .java extension</td>
-<td>Does not contain any constructors</td>
-</tr>
-<tr>
-<td>Byte code of an interface appears in a .class file</td>
-<td>All of the methods in an interface are abstract</td>
-</tr>
-<tr>
-<td>Appear in packages, and their corresponding bytecode file must be in a directory structure that matches the package name</td>
-<td>Cannot contain instance fields. must be declared both static and final.</td>
-</tr>
-</tbody></table>
-<p>An interface is not extended by a class; it is implemented by a class.</p>
-<p>An interface can extend multiple interfaces.</p>
-<h2 id="Implementing-Interfaces"><a href="#Implementing-Interfaces" class="headerlink" title="Implementing Interfaces"></a>Implementing Interfaces</h2><p>When a class implements an interface, you can think of the class as signing a contract, agreeing to perform the specific behaviors of the interface. If a class does not perform all the behaviors of the interface, the class must declare itself as abstract.</p>
-<p>When implementation interfaces, there are several rules −</p>
-<ul>
-<li>A class can implement more than one interface at a time.</li>
-<li>A class can extend only one class, but implement many interfaces.</li>
-<li>An interface can extend another interface, in a similar way as a class can extend another class.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface Animal &#123;</span><br><span class="line">   public void eat();</span><br><span class="line">   public void travel();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class MammalInt implements Animal &#123;</span><br><span class="line"></span><br><span class="line">   public void eat() &#123;</span><br><span class="line">      System.out.println(&quot;Mammal eats&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void travel() &#123;</span><br><span class="line">      System.out.println(&quot;Mammal travels&quot;);</span><br><span class="line">   &#125; </span><br><span class="line"></span><br><span class="line">   public int noOfLegs() &#123;</span><br><span class="line">      return 0;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String args[]) &#123;</span><br><span class="line">      MammalInt m = new MammalInt();</span><br><span class="line">      m.eat();</span><br><span class="line">      m.travel();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Extending-Interfaces"><a href="#Extending-Interfaces" class="headerlink" title="Extending Interfaces"></a>Extending Interfaces</h3><p>An interface can extend another interface in the same way that a class can extend another class. The extends keyword is used to extend an interface, and the child interface inherits the methods of the parent interface.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// Filename: Sports.java</span><br><span class="line">public interface Sports &#123;</span><br><span class="line">   public void setHomeTeam(String name);</span><br><span class="line">   public void setVisitingTeam(String name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Filename: Football.java</span><br><span class="line">public interface Football extends Sports &#123;</span><br><span class="line">   public void homeTeamScored(int points);</span><br><span class="line">   public void visitingTeamScored(int points);</span><br><span class="line">   public void endOfQuarter(int quarter);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Filename: Hockey.java</span><br><span class="line">public interface Hockey extends Sports &#123;</span><br><span class="line">   public void homeGoalScored();</span><br><span class="line">   public void visitingGoalScored();</span><br><span class="line">   public void endOfPeriod(int period);</span><br><span class="line">   public void overtimePeriod(int ot);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface Hockey extends Sports, Event</span><br></pre></td></tr></table></figure>
-
-<h3 id="Why-we-need-interfaces"><a href="#Why-we-need-interfaces" class="headerlink" title="Why we need interfaces?"></a>Why we need interfaces?</h3><p>The interface can independently inherit from an interface or class without paying attention to the implementation of its peripheral classes, which makes the extension class or interface more flexible, and the granularity of control can be finer!</p>
+<h2 id="GET-Method"><a href="#GET-Method" class="headerlink" title="GET Method"></a>GET Method</h2><p>A GET request retrieves data from a web server by specifying parameters in the URL portion of the request. This is the main method used for document retrieval. </p>
+<h2 id="HEAD-Method"><a href="#HEAD-Method" class="headerlink" title="HEAD Method"></a>HEAD Method</h2><p>The HEAD method is functionally similar to GET, except that the server replies with a response line and headers, but no entity-body.</p>
+<h2 id="POST-Method"><a href="#POST-Method" class="headerlink" title="POST Method"></a>POST Method</h2><p>The POST method is used when you want to send some data to the server, for example, file update, form data, etc. </p>
+<h2 id="PUT-Method"><a href="#PUT-Method" class="headerlink" title="PUT Method"></a>PUT Method</h2><p>The PUT method is used to request the server to store the included entity-body at a location specified by the given URL.</p>
+<h2 id="DELETE-Method"><a href="#DELETE-Method" class="headerlink" title="DELETE Method"></a>DELETE Method</h2><p>The DELETE method is used to request the server to delete a file at a location specified by the given URL.</p>
+<h2 id="CONNECT-Method"><a href="#CONNECT-Method" class="headerlink" title="CONNECT Method"></a>CONNECT Method</h2><p>The CONNECT method is used by the client to establish a network connection to a web server over HTTP.</p>
+<h2 id="OPTIONS-Method"><a href="#OPTIONS-Method" class="headerlink" title="OPTIONS Method"></a>OPTIONS Method</h2><p>The OPTIONS method is used by the client to find out the HTTP methods and other options supported by a web server. The client can specify a URL for the OPTIONS method, or an asterisk (*) to refer to the entire server. </p>
+<h2 id="TRACE-Method"><a href="#TRACE-Method" class="headerlink" title="TRACE Method"></a>TRACE Method</h2><p>The TRACE method is used to echo the contents of an HTTP Request back to the requester which can be used for debugging purpose at the time of development. </p>
 
       
 
@@ -224,7 +190,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
         		</li>
       		
 		</ul>
@@ -243,18 +209,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/05/Java-OOP/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java OOP
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/03/Java-Spring-Bean/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java Spring Bean</div>
+    <a href="/2020/03/12/Java-Overloading-and-Overriding/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java Overloading and Overriding</div>
       <i class="icon-circle-right"></i>
     </a>
   
