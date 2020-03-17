@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | HKD</title>
+  <title>Static class in Java | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HKD">
-<meta property="og:url" content="http://yoursite.com/archives/2020/page/2/index.html">
+  <meta name="description" content="Static class in JavaCan a class be static in Java?">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Static class in Java">
+<meta property="og:url" content="http://yoursite.com/2020/03/16/Static-class-in-Java/index.html">
 <meta property="og:site_name" content="HKD">
+<meta property="og:description" content="Static class in JavaCan a class be static in Java?">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-17T03:12:53.550Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HKD">
+<meta name="twitter:title" content="Static class in Java">
+<meta name="twitter:description" content="Static class in JavaCan a class be static in Java?">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -140,379 +145,101 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Static-class-in-Java" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Static class in Java
+    </h1>
+  
+
+        
+        <a href="/2020/03/16/Static-class-in-Java/" class="archive-article-date">
+  	<time datetime="2020-03-17T03:11:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-16</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Static-class-in-Java"><a href="#Static-class-in-Java" class="headerlink" title="Static class in Java"></a>Static class in Java</h1><p>Can a class be static in Java?</p>
+<a id="more"></a>
+
+<p>The answer is Yes, some classes can be made static in Java. Java supports Static Instance Variables, Static Methods, Static Block and Static Classes</p>
+<p>Java allows a class to be defined within another class. These are called Nested Classes. The class in which the nested class is defined is known as the Outer Class. Unlike top level classes, Inner classes can be Static. Non-static nested classes are also known as Inner classes.</p>
+<p>An instance of an inner class cannot be created without an instance of the outer class. Therefore, an inner class instance can access all of the members of its outer class, without using a reference to the outer class instance. For this reason inner classes can help make programs simple and concise.</p>
+<p>What are the differences between static and non-static nested classes?<br>The following are major differences between static nested classes and inner classes.</p>
+<p>A static nested class may be instantiated without instantiating its outer class.<br>Inner classes can access both static and non-static members of the outer class. A static class can access only the static members of the outer class.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">class OuterClass &#123; </span><br><span class="line">    private static String msg = &quot;GeeksForGeeks&quot;; </span><br><span class="line">  </span><br><span class="line">    // Static nested class </span><br><span class="line">    public static class NestedStaticClass &#123; </span><br><span class="line">  </span><br><span class="line">        // Only static members of Outer class </span><br><span class="line">        // is directly accessible in nested </span><br><span class="line">        // static class </span><br><span class="line">        public void printMessage() </span><br><span class="line">        &#123; </span><br><span class="line">  </span><br><span class="line">            // Try making &apos;message&apos; a non-static </span><br><span class="line">            // variable, there will be compiler error </span><br><span class="line">            System.out.println( </span><br><span class="line">                &quot;Message from nested static class: &quot;</span><br><span class="line">                + msg); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    // Non-static nested class - </span><br><span class="line">    // also called Inner class </span><br><span class="line">    public class InnerClass &#123; </span><br><span class="line">  </span><br><span class="line">        // Both static and non-static members </span><br><span class="line">        // of Outer class are accessible in </span><br><span class="line">        // this Inner class </span><br><span class="line">        public void display() </span><br><span class="line">        &#123; </span><br><span class="line">            System.out.println( </span><br><span class="line">                &quot;Message from non-static nested class: &quot;</span><br><span class="line">                + msg); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">class Main &#123; </span><br><span class="line">    // How to create instance of static </span><br><span class="line">    // and non static nested class? </span><br><span class="line">    public static void main(String args[]) </span><br><span class="line">    &#123; </span><br><span class="line">  </span><br><span class="line">        // Create instance of nested Static class </span><br><span class="line">        OuterClass.NestedStaticClass printer </span><br><span class="line">            = new OuterClass.NestedStaticClass(); </span><br><span class="line">  </span><br><span class="line">        // Call non static method of nested </span><br><span class="line">        // static class </span><br><span class="line">        printer.printMessage(); </span><br><span class="line">  </span><br><span class="line">        // In order to create instance of </span><br><span class="line">        // Inner class we need an Outer class </span><br><span class="line">        // instance. Let us create Outer class </span><br><span class="line">        // instance for creating </span><br><span class="line">        // non-static nested class </span><br><span class="line">        OuterClass outer = new OuterClass(); </span><br><span class="line">        OuterClass.InnerClass inner </span><br><span class="line">            = outer.new InnerClass(); </span><br><span class="line">  </span><br><span class="line">        // Calling non-static method of Inner class </span><br><span class="line">        inner.display(); </span><br><span class="line">  </span><br><span class="line">        // We can also combine above steps in one </span><br><span class="line">        // step to create instance of Inner class </span><br><span class="line">        OuterClass.InnerClass innerObject </span><br><span class="line">            = new OuterClass().new InnerClass(); </span><br><span class="line">  </span><br><span class="line">        // Similarly we can now call Inner class method </span><br><span class="line">        innerObject.display(); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/02/Maven-notes/" class="archive-article-date">
-  	<time datetime="2020-03-03T03:01:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/02/Maven-notes/">Maven notes</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/Algorithm-Recursion/" class="archive-article-date">
-  	<time datetime="2020-03-02T03:29:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/15/HTTP-Methods/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTTP Methods</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/Algorithm-Recursion/">Algorithm Recursion</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Recursion</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/RESTful-basics/" class="archive-article-date">
-  	<time datetime="2020-03-01T18:53:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/RESTful-basics/">RESTful basics</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RESTful</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/29/MongoDB-note/" class="archive-article-date">
-  	<time datetime="2020-03-01T03:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/29/MongoDB-note/">MongoDB note</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/29/SQL-vs-NoSQL/" class="archive-article-date">
-  	<time datetime="2020-03-01T02:33:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/29/SQL-vs-NoSQL/">SQL vs NoSQL</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Database</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/25/Algorithm-Binary-Search/" class="archive-article-date">
-  	<time datetime="2020-02-26T02:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/25/Algorithm-Binary-Search/">Algorithm Binary Search</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Binary Search</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/24/Data-structure-notes/" class="archive-article-date">
-  	<time datetime="2020-02-25T03:38:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/24/Data-structure-notes/">Data structure notes</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Data Structure</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/" class="archive-article-date">
-  	<time datetime="2020-02-24T02:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/">How to make website like this on Windows II</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/How to make website like this on Windows/" class="archive-article-date">
-  	<time datetime="2020-02-23T19:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/How to make website like this on Windows/">How to make website like this on Windows</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/">&laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -544,8 +271,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
