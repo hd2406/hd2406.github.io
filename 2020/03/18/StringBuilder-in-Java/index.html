@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: CSS | HKD</title>
+  <title>StringBuilder in Java | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HKD">
-<meta property="og:url" content="http://yoursite.com/tags/CSS/index.html">
+  <meta name="description" content="StringBuilder Class in JavaThe StringBuilder in Java represents a mutable sequence of characters. Since the String Class in Java creates an immutable sequence of characters, the StringBuilder class pr">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="StringBuilder in Java">
+<meta property="og:url" content="http://yoursite.com/2020/03/18/StringBuilder-in-Java/index.html">
 <meta property="og:site_name" content="HKD">
+<meta property="og:description" content="StringBuilder Class in JavaThe StringBuilder in Java represents a mutable sequence of characters. Since the String Class in Java creates an immutable sequence of characters, the StringBuilder class pr">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-18T04:03:33.017Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HKD">
+<meta name="twitter:title" content="StringBuilder in Java">
+<meta name="twitter:description" content="StringBuilder Class in JavaThe StringBuilder in Java represents a mutable sequence of characters. Since the String Class in Java creates an immutable sequence of characters, the StringBuilder class pr">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -140,60 +145,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-StringBuilder-in-Java" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/10/Responsive-Transition/" class="archive-article-date">
-  	<time datetime="2020-03-11T01:59:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/10/Responsive-Transition/">Responsive Transition</a>
+    <h1 class="article-title" itemprop="name">
+      StringBuilder in Java
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/03/18/StringBuilder-in-Java/" class="archive-article-date">
+  	<time datetime="2020-03-18T04:02:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="StringBuilder-Class-in-Java"><a href="#StringBuilder-Class-in-Java" class="headerlink" title="StringBuilder Class in Java"></a>StringBuilder Class in Java</h1><p>The StringBuilder in Java represents a mutable sequence of characters. Since the String Class in Java creates an immutable sequence of characters, the StringBuilder class provides an alternative to String Class, as it creates a mutable sequence of characters. </p>
+<a id="more"></a>
+<p>The function of StringBuilder is very much similar to the StringBuffer class, as both of them provide an alternative to String Class by making a mutable sequence of characters.</p>
+<p>However the StringBuilder class differs from the StringBuffer class on the basis of synchronization. The StringBuilder class provides no guarantee of synchronization whereas the StringBuffer class does.</p>
+<p>Therefore this class is designed for use as a drop-in replacement for StringBuffer in places where the StringBuffer was being used by a single thread (as is generally the case). Where possible, it is recommended that this class be used in preference to StringBuffer as it will be faster under most implementations. Instances of StringBuilder are not safe for use by multiple threads. If such synchronization is required then it is recommended that StringBuffer be used.</p>
+<p>Class Hierarchy:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">java.lang.Object</span><br><span class="line"> ↳ java.lang</span><br><span class="line">    ↳ Class StringBuilder</span><br><span class="line"> ```  </span><br><span class="line">    </span><br><span class="line">Syntax:</span><br></pre></td></tr></table></figure>
+
+<p>public final class StringBuilder<br>    extends Object<br>    implements Serializable, CharSequence<br>Constructors in Java StringBuilder:</p>
+<p>```</p>
+<ul>
+<li>StringBuilder(): Constructs a string builder with no characters in it and an initial capacity of 16 characters.</li>
+<li>StringBuilder(int capacity): Constructs a string builder with no characters in it and an initial capacity specified by the capacity argument.</li>
+<li>StringBuilder(CharSequence seq): Constructs a string builder that contains the same characters as the specified CharSequence.</li>
+<li>StringBuilder(String str): Constructs a string builder initialized to the contents of the specified string.</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/03/16/Static-class-in-Java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Static class in Java</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -224,9 +279,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
