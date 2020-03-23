@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Algorithm Binary Search | HKD</title>
+  <title>Enum in Java | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
-<meta name="keywords" content="Algorithm,Binary Search">
+  <meta name="description" content="Enum in JavaEnumerations serve the purpose of representing a group of named constants in a programming language. For example the 4 suits in a deck of playing cards may be 4 enumerators named Club, Dia">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Algorithm Binary Search">
-<meta property="og:url" content="http://yoursite.com/2020/02/25/Algorithm-Binary-Search/index.html">
+<meta property="og:title" content="Enum in Java">
+<meta property="og:url" content="http://yoursite.com/2020/03/22/Enum-in-Java/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
+<meta property="og:description" content="Enum in JavaEnumerations serve the purpose of representing a group of named constants in a programming language. For example the 4 suits in a deck of playing cards may be 4 enumerators named Club, Dia">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2020/02/25/Algorithm-Binary-Search/refuse.png">
-<meta property="og:updated_time" content="2020-03-02T03:31:15.847Z">
+<meta property="og:updated_time" content="2020-03-23T02:14:02.084Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Algorithm Binary Search">
-<meta name="twitter:description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/25/Algorithm-Binary-Search/refuse.png">
+<meta name="twitter:title" content="Enum in Java">
+<meta name="twitter:description" content="Enum in JavaEnumerations serve the purpose of representing a group of named constants in a programming language. For example the 4 suits in a deck of playing cards may be 4 enumerators named Club, Dia">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -147,45 +145,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Algorithm-Binary-Search" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Enum-in-Java" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Algorithm Binary Search
+      Enum in Java
     </h1>
   
 
         
-        <a href="/2020/02/25/Algorithm-Binary-Search/" class="archive-article-date">
-  	<time datetime="2020-02-26T02:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+        <a href="/2020/03/22/Enum-in-Java/" class="archive-article-date">
+  	<time datetime="2020-03-23T02:13:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h1><p>A simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.</p>
+        <h1 id="Enum-in-Java"><a href="#Enum-in-Java" class="headerlink" title="Enum in Java"></a>Enum in Java</h1><p>Enumerations serve the purpose of representing a group of named constants in a programming language. For example the 4 suits in a deck of playing cards may be 4 enumerators named Club, Diamond, Heart, and Spade, belonging to an enumerated type named Suit. Other examples include natural enumerated types (like the planets, days of the week, colors, directions, etc.).</p>
 <a id="more"></a>
+<p>Enums are used when we know all possible values at compile time, such as choices on a menu, rounding modes, command line flags, etc. It is not necessary that the set of constants in an enum type stay fixed for all time.</p>
+<p>In Java (from 1.5), enums are represented using enum data type. Java enums are more powerful than C/C++ enums . In Java, we can also add variables, methods and constructors to it. The main objective of enum is to define our own data types(Enumerated Data Types).</p>
+<h2 id="Difference-between-Enums-and-Classes"><a href="#Difference-between-Enums-and-Classes" class="headerlink" title="Difference between Enums and Classes"></a>Difference between Enums and Classes</h2><p>An enum can, just like a class, have attributes and methods. The only difference is that enum constants are public, static and final (unchangeable - cannot be overridden).</p>
+<p>An enum cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).</p>
+<h2 id="Why-And-When-To-Use-Enums"><a href="#Why-And-When-To-Use-Enums" class="headerlink" title="Why And When To Use Enums?"></a>Why And When To Use Enums?</h2><p>Use enums when you have values that you know aren’t going to change, like month days, days, colors, deck of cards, etc.</p>
+<h2 id="Enum-inside-a-Class"><a href="#Enum-inside-a-Class" class="headerlink" title="Enum inside a Class"></a>Enum inside a Class</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class MyClass &#123;</span><br><span class="line">  enum Level &#123;</span><br><span class="line">    LOW,</span><br><span class="line">    MEDIUM,</span><br><span class="line">    HIGH</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">    Level myVar = Level.MEDIUM; </span><br><span class="line">    System.out.println(myVar);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>WHAT is Binary Search ?</strong><br>Binary Search searches a sorted array by repeatedly dividing the search interval by half.</p>
-<ul>
-<li>Sorted the array</li>
-<li>Begin with the interval covering the whole array</li>
-<li>If the middle value of the interval is less than the target -&gt; go to the greater half. Vise versa.</li>
-<li>Repeatedly to narrow the interval until found it or the interval is empty</li>
-</ul>
-<p>The time complexity is reduced to O(logN).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n) = T(n/2) + c</span><br></pre></td></tr></table></figure>
+<h2 id="Enum-in-a-Switch-Statement"><a href="#Enum-in-a-Switch-Statement" class="headerlink" title="Enum in a Switch Statement"></a>Enum in a Switch Statement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">enum Level &#123;</span><br><span class="line">  LOW,</span><br><span class="line">  MEDIUM,</span><br><span class="line">  HIGH</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class MyClass &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">    Level myVar = Level.MEDIUM;</span><br><span class="line"></span><br><span class="line">    switch(myVar) &#123;</span><br><span class="line">      case LOW:</span><br><span class="line">        System.out.println(&quot;Low level&quot;);</span><br><span class="line">        break;</span><br><span class="line">      case MEDIUM:</span><br><span class="line">         System.out.println(&quot;Medium level&quot;);</span><br><span class="line">        break;</span><br><span class="line">      case HIGH:</span><br><span class="line">        System.out.println(&quot;High level&quot;);</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Python3-iterative"><a href="#Python3-iterative" class="headerlink" title="Python3 iterative"></a>Python3 iterative</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def BinarySearch(arr, l, r, x):</span><br><span class="line">    while r &gt;= l:</span><br><span class="line">        mid = l + (r - 1) // 2</span><br><span class="line">    </span><br><span class="line">        if arr[mid] == x:</span><br><span class="line">            return mid</span><br><span class="line">        elif arr[mid] &gt; x:</span><br><span class="line">            r = mid - 1</span><br><span class="line">        else &lt; x:</span><br><span class="line">            l = mid +1</span><br><span class="line">    return -1</span><br></pre></td></tr></table></figure>
+<h2 id="Loop-Through-an-Enum"><a href="#Loop-Through-an-Enum" class="headerlink" title="Loop Through an Enum"></a>Loop Through an Enum</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (Level myVar : Level.values()) &#123;</span><br><span class="line">  System.out.println(myVar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Python3-recursive"><a href="#Python3-recursive" class="headerlink" title="Python3 recursive"></a>Python3 recursive</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def BinarySearch(arr, l, r, x):</span><br><span class="line">    if r &gt;= l:</span><br><span class="line">        mid = l + (r - 1) // 2</span><br><span class="line">    </span><br><span class="line">        if arr[mid] == x:</span><br><span class="line">            return mid</span><br><span class="line">        elif arr[mid] &gt; x:</span><br><span class="line">            return BinarySearch(arr, l, mid-1, x)</span><br><span class="line">        elif arr[mid] &lt; x:</span><br><span class="line">            return BinarySearch(arr, mid+1, r, x)</span><br><span class="line">    else:</span><br><span class="line">        return -1</span><br></pre></td></tr></table></figure>
 
-<p>Linear Search is easy, but</p>
-<img src="/2020/02/25/Algorithm-Binary-Search/refuse.png" title="This is an image">
       
 
       
@@ -198,11 +191,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Binary Search</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -221,18 +210,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/29/SQL-vs-NoSQL/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SQL vs NoSQL
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/24/Data-structure-notes/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Data structure notes</div>
+    <a href="/2020/03/20/Lambda-in-Java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Lambda in Java</div>
       <i class="icon-circle-right"></i>
     </a>
   
