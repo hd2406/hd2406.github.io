@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Lambda in Java | HKD</title>
+  <title>Java - Servlets | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Lambda Expressions in JavaLambda expressions basically express instances of functional interfaces (An interface with single abstract method is called functional interface. An example is java.lang.Runn">
+  <meta name="description" content="Java ServletsServlets are the Java programs that runs on the Java-enabled web server or application server. They are used to handle the request obtained from the web server, process the request, produ">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lambda in Java">
-<meta property="og:url" content="http://yoursite.com/2020/03/20/Lambda-in-Java/index.html">
+<meta property="og:title" content="Java - Servlets">
+<meta property="og:url" content="http://yoursite.com/2020/03/24/Java-Servlets/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Lambda Expressions in JavaLambda expressions basically express instances of functional interfaces (An interface with single abstract method is called functional interface. An example is java.lang.Runn">
+<meta property="og:description" content="Java ServletsServlets are the Java programs that runs on the Java-enabled web server or application server. They are used to handle the request obtained from the web server, process the request, produ">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-20T04:44:35.051Z">
+<meta property="og:updated_time" content="2020-03-25T00:40:38.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lambda in Java">
-<meta name="twitter:description" content="Lambda Expressions in JavaLambda expressions basically express instances of functional interfaces (An interface with single abstract method is called functional interface. An example is java.lang.Runn">
+<meta name="twitter:title" content="Java - Servlets">
+<meta name="twitter:description" content="Java ServletsServlets are the Java programs that runs on the Java-enabled web server or application server. They are used to handle the request obtained from the web server, process the request, produ">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -145,55 +145,107 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Lambda-in-Java" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java-Servlets" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Lambda in Java
+      Java - Servlets
     </h1>
   
 
         
-        <a href="/2020/03/20/Lambda-in-Java/" class="archive-article-date">
-  	<time datetime="2020-03-20T04:44:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-20</time>
+        <a href="/2020/03/24/Java-Servlets/" class="archive-article-date">
+  	<time datetime="2020-03-25T00:39:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Lambda-Expressions-in-Java"><a href="#Lambda-Expressions-in-Java" class="headerlink" title="Lambda Expressions in Java"></a>Lambda Expressions in Java</h1><p>Lambda expressions basically express instances of functional interfaces (An interface with single abstract method is called functional interface. An example is java.lang.Runnable). lambda expressions implement the only abstract function and therefore implement functional interfaces</p>
+        <h1 id="Java-Servlets"><a href="#Java-Servlets" class="headerlink" title="Java Servlets"></a>Java Servlets</h1><p>Servlets are the Java programs that runs on the Java-enabled web server or application server. They are used to handle the request obtained from the web server, process the request, produce the response, then send response back to the web server.</p>
 <a id="more"></a>
-<p>lambda expressions are added in Java 8 and provide below functionalities.</p>
+<p><strong>Properties of Servlets</strong> :</p>
 <ul>
-<li>Enable to treat functionality as a method argument, or code as data.</li>
-<li>A function that can be created without belonging to any class.</li>
-<li>A lambda expression can be passed around as if it was an object and executed on demand.</li>
+<li>Servlets work on the server-side.</li>
+<li>Servlets are capable of handling complex requests obtained from web server.</li>
 </ul>
-<p>Syntax:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lambda operator -&gt; body</span><br></pre></td></tr></table></figure>
-
-<p>where lambda operator can be:</p>
-<p>Zero parameter:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">() -&gt; System.out.println(&quot;Zero parameter lambda&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>One parameter:–</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(p) -&gt; System.out.println(&quot;One parameter: &quot; + p);</span><br></pre></td></tr></table></figure>
-
-<p>It is not mandatory to use parentheses, if the type of that variable can be inferred from the context</p>
-<p>Multiple parameters :</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(p1, p2) -&gt; System.out.println(&quot;Multiple parameters: &quot; + p1 + &quot;, &quot; + p2);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">// Java program to demonstrate working of lambda expressions </span><br><span class="line">public class Test </span><br><span class="line">&#123; </span><br><span class="line">    // operation is implemented using lambda expressions </span><br><span class="line">    interface FuncInter1 </span><br><span class="line">    &#123; </span><br><span class="line">        int operation(int a, int b); </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    // sayMessage() is implemented using lambda expressions </span><br><span class="line">    // above </span><br><span class="line">    interface FuncInter2 </span><br><span class="line">    &#123; </span><br><span class="line">        void sayMessage(String message); </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    // Performs FuncInter1&apos;s operation on &apos;a&apos; and &apos;b&apos; </span><br><span class="line">    private int operate(int a, int b, FuncInter1 fobj) </span><br><span class="line">    &#123; </span><br><span class="line">        return fobj.operation(a, b); </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    public static void main(String args[]) </span><br><span class="line">    &#123; </span><br><span class="line">        // lambda expression for addition for two parameters </span><br><span class="line">        // data type for x and y is optional. </span><br><span class="line">        // This expression implements &apos;FuncInter1&apos; interface </span><br><span class="line">        FuncInter1 add = (int x, int y) -&gt; x + y; </span><br><span class="line">  </span><br><span class="line">        // lambda expression multiplication for two parameters </span><br><span class="line">        // This expression also implements &apos;FuncInter1&apos; interface </span><br><span class="line">        FuncInter1 multiply = (int x, int y) -&gt; x * y; </span><br><span class="line">  </span><br><span class="line">        // Creating an object of Test to call operate using </span><br><span class="line">        // different implementations using lambda Expressions </span><br><span class="line">        Test tobj = new Test(); </span><br><span class="line">  </span><br><span class="line">        // Add two numbers using lambda expression </span><br><span class="line">        System.out.println(&quot;Addition is &quot; + </span><br><span class="line">                          tobj.operate(6, 3, add)); </span><br><span class="line">  </span><br><span class="line">        // Multiply two numbers using lambda expression </span><br><span class="line">        System.out.println(&quot;Multiplication is &quot; + </span><br><span class="line">                          tobj.operate(6, 3, multiply)); </span><br><span class="line">  </span><br><span class="line">        // lambda expression for single parameter </span><br><span class="line">        // This expression implements &apos;FuncInter2&apos; interface </span><br><span class="line">        FuncInter2 fobj = message -&gt;System.out.println(&quot;Hello &quot;</span><br><span class="line">                                                 + message); </span><br><span class="line">        fobj.sayMessage(&quot;Geek&quot;); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Important points:</p>
+<p><strong>Execution of Servlets</strong> :<br>Execution of Servlets involves six basic steps:</p>
+<ol>
+<li>The clients send the request to the web server.</li>
+<li>The web server receives the request.</li>
+<li>The web server passes the request to the corresponding servlet.</li>
+<li>The servlet processes the request and generates the response in the form of output.</li>
+<li>The servlet sends the response back to the web server.</li>
+<li>The web server sends the response back to the client and the client browser displays it on the screen.</li>
+</ol>
+<h1 id="Servlets-API’s"><a href="#Servlets-API’s" class="headerlink" title="Servlets API’s:"></a>Servlets API’s:</h1><p>Servlets are build from two packages:</p>
 <ul>
-<li>The body of a lambda expression can contain zero, one or more statements.</li>
-<li>When there is a single statement curly brackets are not mandatory and the return type of the anonymous function is the same as that of the body expression.</li>
-<li>When there are more than one statements, then these must be enclosed in curly brackets (a code block) and the return type of the anonymous function is the same as the type of the value returned within the code block, or void if nothing is returned.</li>
+<li>javax.servlet(Basic)</li>
+<li>javax.servlet.http(Advance)</li>
+</ul>
+<p>Various classes and interfaces present in these packages are:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>TYPE</th>
+<th>PACKAGE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Servlet</td>
+<td>Interface</td>
+<td>javax.servlet.*</td>
+</tr>
+<tr>
+<td>ServletRequest</td>
+<td>Interface</td>
+<td>javax.servlet.*</td>
+</tr>
+<tr>
+<td>ServletResponse</td>
+<td>Interface</td>
+<td>javax.servlet.*</td>
+</tr>
+<tr>
+<td>GenericServlet</td>
+<td>Class</td>
+<td>javax.servlet.*</td>
+</tr>
+<tr>
+<td>HttpServlet</td>
+<td>Class</td>
+<td>javax.servlet.http.*</td>
+</tr>
+<tr>
+<td>HttpServletRequest</td>
+<td>Interface</td>
+<td>javax.servlet.http.*</td>
+</tr>
+<tr>
+<td>HttpServletResponse</td>
+<td>Interface</td>
+<td>javax.servlet.http.*</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>Interface</td>
+<td>javax.servlet.*</td>
+</tr>
+<tr>
+<td>ServletConfig</td>
+<td>Interface</td>
+<td>javax.servlet.*</td>
+</tr>
+</tbody></table>
+<h2 id="Advantages-of-a-Java-Servlet"><a href="#Advantages-of-a-Java-Servlet" class="headerlink" title="Advantages of a Java Servlet"></a>Advantages of a Java Servlet</h2><ul>
+<li>Servlets as written in Java are platform independent.</li>
+<li>Removes the overhead of creating a new process for each request as Servlet doesn’t run in a separate process. There is only a single instance which handles all requests concurrently. This also saves the memory and allows a Servlet to easily manage client state.</li>
+<li>It is a server-side component, so Servlet inherits the security provided by the Web server.</li>
+<li>The API designed for Java Servlet automatically acquires the advantages of Java platform such as platform independent and portability. In addition, it obviously can use the wide range of APIs created on Java platform such as JDBC to access the database.</li>
 </ul>
 
       
@@ -227,18 +279,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/22/Enum-in-Java/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Enum in Java
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/18/Generics-in-Java/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Generics in Java</div>
+    <a href="/2020/03/23/Reflection-in-Java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Reflection in Java</div>
       <i class="icon-circle-right"></i>
     </a>
   
