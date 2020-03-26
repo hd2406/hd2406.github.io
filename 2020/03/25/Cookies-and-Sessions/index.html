@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/2 | HKD</title>
+  <title>Cookies and Sessions | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HKD">
-<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
+  <meta name="description" content="Cookies and SessionsWhat is a cookie?Cookies are text files stored on the client computer and they are kept of use tracking purpose. Server script sends a set of cookies to the browser. For example na">
+<meta name="keywords" content="Servlet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cookies and Sessions">
+<meta property="og:url" content="http://yoursite.com/2020/03/25/Cookies-and-Sessions/index.html">
 <meta property="og:site_name" content="HKD">
+<meta property="og:description" content="Cookies and SessionsWhat is a cookie?Cookies are text files stored on the client computer and they are kept of use tracking purpose. Server script sends a set of cookies to the browser. For example na">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-26T02:50:27.873Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HKD">
+<meta name="twitter:title" content="Cookies and Sessions">
+<meta name="twitter:description" content="Cookies and SessionsWhat is a cookie?Cookies are text files stored on the client computer and they are kept of use tracking purpose. Server script sends a set of cookies to the browser. For example na">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -140,258 +145,130 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Cookies-and-Sessions" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Cookies and Sessions
+    </h1>
+  
+
+        
+        <a href="/2020/03/25/Cookies-and-Sessions/" class="archive-article-date">
+  	<time datetime="2020-03-26T02:49:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-25</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Cookies-and-Sessions"><a href="#Cookies-and-Sessions" class="headerlink" title="Cookies and Sessions"></a>Cookies and Sessions</h1><h2 id="What-is-a-cookie"><a href="#What-is-a-cookie" class="headerlink" title="What is a cookie?"></a>What is a cookie?</h2><p>Cookies are text files stored on the client computer and they are kept of use tracking purpose. Server script sends a set of cookies to the browser. For example name, age, or identification number etc. The browser stores this information on a local machine for future use.</p>
+<a id="more"></a>
+<p>When next time browser sends any request to web server then it sends those cookies information to the server and server uses that information to identify the user.</p>
+<h3 id="Browser-cookies"><a href="#Browser-cookies" class="headerlink" title="Browser cookies"></a>Browser cookies</h3><p>Cookie basics:</p>
+<ul>
+<li>The first time a browser connects with a particular server, there are no cookies.</li>
+<li>When the server responds it includes a Set-Cookie: header that defines a cookie.</li>
+<li>Each cookie is just a name-value pair.</li>
+<li>In the future whenever the browser connects with the same server, it includes a Cookie: header containing the name and value, which the server can use to connect related requests.</li>
+</ul>
+<p>What’s in a cookie?</p>
+<ul>
+<li>Name and data. Data size limited by browsers (typically &lt; 4 KB).</li>
+<li>A server can define multiple cookies with different names, but browsers limit the number of cookies per server (around 50).</li>
+<li>Domain for this cookie: server, port (optional), URL prefix (optional). The cookie is only included in requests matching its domain.</li>
+<li>Expiration date: browser can delete old cookies.</li>
+</ul>
+<h3 id="Why-to-use-cookies"><a href="#Why-to-use-cookies" class="headerlink" title="Why to use cookies?"></a>Why to use cookies?</h3><p>The information about the client is saved as a cookie in your system. So the next time you send the request, the server will know that you want to see the website in english. This is where cookies play a vital role.</p>
+<p>The concept of cookies was developed for creating a better experience by saving little information as texts on the client’s machine.</p>
+<h2 id="What-is-a-Session"><a href="#What-is-a-Session" class="headerlink" title="What is a Session?"></a>What is a Session?</h2><p>A session creates a file in a temporary directory on the server where registered session variables and their values are stored. This data will be available to all pages on the site during that visit.</p>
+<p>A session ends when the user closes the browser or after leaving the site, the server will terminate the session after a predetermined period of time, commonly 30 minutes duration.</p>
+<h3 id="Sessions-basics"><a href="#Sessions-basics" class="headerlink" title="Sessions basics"></a>Sessions basics</h3><p>In order to achieve session tracking in servlets, cookies have been one of the most commonly used tech. However, they have the following disadvantages:</p>
+<ul>
+<li>They can only keep textual information.</li>
+<li>They’re browser dependent. Hence, if the client disables them, your web application can’t make use of them</li>
+<li>Individual cookie can contain not more than 4kb of information</li>
+</ul>
+<h3 id="Advantages-of-Http-Sessions-in-Servlet"><a href="#Advantages-of-Http-Sessions-in-Servlet" class="headerlink" title="Advantages of Http Sessions in Servlet"></a>Advantages of Http Sessions in Servlet</h3><ul>
+<li>Any kind of object can be stored into a session, be it a text, database, dataset etc.</li>
+<li>Usage of sessions is not dependent on the client’s browser.</li>
+<li>Sessions are secure and transparent</li>
+</ul>
+<h3 id="Disadvantages-of-Http-session"><a href="#Disadvantages-of-Http-session" class="headerlink" title="Disadvantages of Http session"></a>Disadvantages of Http session</h3><ul>
+<li>Performance overhead due to session object being stored on server</li>
+<li>Overhead due to serialization and de-serialization of data</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/29/MongoDB-note/" class="archive-article-date">
-  	<time datetime="2020-03-01T03:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/29/MongoDB-note/">MongoDB note</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Servlet</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/29/SQL-vs-NoSQL/" class="archive-article-date">
-  	<time datetime="2020-03-01T02:33:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/24/Java-Servlets/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java - Servlets</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/29/SQL-vs-NoSQL/">SQL vs NoSQL</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Database</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/25/Algorithm-Binary-Search/" class="archive-article-date">
-  	<time datetime="2020-02-26T02:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/25/Algorithm-Binary-Search/">Algorithm Binary Search</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Binary Search</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/24/Data-structure-notes/" class="archive-article-date">
-  	<time datetime="2020-02-25T03:38:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/24/Data-structure-notes/">Data structure notes</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Data Structure</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/" class="archive-article-date">
-  	<time datetime="2020-02-24T02:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/">How to make website like this on Windows II</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/How to make website like this on Windows/" class="archive-article-date">
-  	<time datetime="2020-02-23T19:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/How to make website like this on Windows/">How to make website like this on Windows</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -422,8 +299,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
