@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Algorithm Binary Search | HKD</title>
+  <title>AJAX | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
-<meta name="keywords" content="Algorithm,Binary Search">
+  <meta name="description" content="AJAX  notesWhat is AJAX?AJAX = Asynchronous JavaScript And XML.">
+<meta name="keywords" content="AJAX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Algorithm Binary Search">
-<meta property="og:url" content="http://yoursite.com/2020/02/25/Algorithm-Binary-Search/index.html">
+<meta property="og:title" content="AJAX">
+<meta property="og:url" content="http://yoursite.com/2020/03/26/AJAX/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
+<meta property="og:description" content="AJAX  notesWhat is AJAX?AJAX = Asynchronous JavaScript And XML.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2020/02/25/Algorithm-Binary-Search/refuse.png">
-<meta property="og:updated_time" content="2020-03-02T03:31:15.847Z">
+<meta property="og:image" content="https://www.w3schools.com/xml/ajax.gif">
+<meta property="og:updated_time" content="2020-03-27T03:20:10.627Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Algorithm Binary Search">
-<meta name="twitter:description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/25/Algorithm-Binary-Search/refuse.png">
+<meta name="twitter:title" content="AJAX">
+<meta name="twitter:description" content="AJAX  notesWhat is AJAX?AJAX = Asynchronous JavaScript And XML.">
+<meta name="twitter:image" content="https://www.w3schools.com/xml/ajax.gif">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -147,45 +147,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Algorithm-Binary-Search" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-AJAX" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Algorithm Binary Search
+      AJAX
     </h1>
   
 
         
-        <a href="/2020/02/25/Algorithm-Binary-Search/" class="archive-article-date">
-  	<time datetime="2020-02-26T02:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+        <a href="/2020/03/26/AJAX/" class="archive-article-date">
+  	<time datetime="2020-03-27T03:19:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h1><p>A simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.</p>
+        <h1 id="AJAX-notes"><a href="#AJAX-notes" class="headerlink" title="AJAX  notes"></a>AJAX  notes</h1><h2 id="What-is-AJAX"><a href="#What-is-AJAX" class="headerlink" title="What is AJAX?"></a>What is AJAX?</h2><p>AJAX = Asynchronous JavaScript And XML.</p>
 <a id="more"></a>
-
-<p><strong>WHAT is Binary Search ?</strong><br>Binary Search searches a sorted array by repeatedly dividing the search interval by half.</p>
-<ul>
-<li>Sorted the array</li>
-<li>Begin with the interval covering the whole array</li>
-<li>If the middle value of the interval is less than the target -&gt; go to the greater half. Vise versa.</li>
-<li>Repeatedly to narrow the interval until found it or the interval is empty</li>
+<p>AJAX is not a programming language.</p>
+<p>AJAX just uses a combination of:</p>
+<p>A browser built-in XMLHttpRequest object (to request data from a web server)<br>JavaScript and HTML DOM (to display or use the data)</p>
+<h2 id="AJAX-details"><a href="#AJAX-details" class="headerlink" title="AJAX details"></a>AJAX details</h2><ul>
+<li>AJAX uses XHTML for content, CSS for presentation, along with Document Object Model and JavaScript for dynamic content display.</li>
+<li>With AJAX, when you hit submit, JavaScript will make a request to the server, interpret the results, and update the current screen. In the purest sense, the user would never know that anything was even transmitted to the server.</li>
+<li>AJAX applications might use XML to transport data, but it is equally common to transport data as plain text or JSON text.</li>
+<li>AJAX is a web browser technology independent of web server software.</li>
+<li>A user can continue to use the application while the client program requests information from the server in the background.</li>
+<li>Intuitive and natural user interaction. Clicking is not required, mouse movement is a sufficient event trigger.</li>
+<li>Data-driven as opposed to page-driven.</li>
 </ul>
-<p>The time complexity is reduced to O(logN).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n) = T(n/2) + c</span><br></pre></td></tr></table></figure>
+<h1 id="How-AJAX-Works"><a href="#How-AJAX-Works" class="headerlink" title="How AJAX Works"></a>How AJAX Works</h1><ol>
+<li>An event occurs in a web page (the page is loaded, a button is clicked)</li>
+<li>An XMLHttpRequest object is created by JavaScript</li>
+<li>The XMLHttpRequest object sends a request to a web server</li>
+<li>The server processes the request</li>
+<li>The server sends a response back to the web page</li>
+<li>The response is read by JavaScript</li>
+<li>Proper action (like page update) is performed by JavaScript</li>
+</ol>
+<p><img src="https://www.w3schools.com/xml/ajax.gif" alt="N|Solid"></p>
 
-<h2 id="Python3-iterative"><a href="#Python3-iterative" class="headerlink" title="Python3 iterative"></a>Python3 iterative</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def BinarySearch(arr, l, r, x):</span><br><span class="line">    while r &gt;= l:</span><br><span class="line">        mid = l + (r - 1) // 2</span><br><span class="line">    </span><br><span class="line">        if arr[mid] == x:</span><br><span class="line">            return mid</span><br><span class="line">        elif arr[mid] &gt; x:</span><br><span class="line">            r = mid - 1</span><br><span class="line">        else &lt; x:</span><br><span class="line">            l = mid +1</span><br><span class="line">    return -1</span><br></pre></td></tr></table></figure>
-
-<h2 id="Python3-recursive"><a href="#Python3-recursive" class="headerlink" title="Python3 recursive"></a>Python3 recursive</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def BinarySearch(arr, l, r, x):</span><br><span class="line">    if r &gt;= l:</span><br><span class="line">        mid = l + (r - 1) // 2</span><br><span class="line">    </span><br><span class="line">        if arr[mid] == x:</span><br><span class="line">            return mid</span><br><span class="line">        elif arr[mid] &gt; x:</span><br><span class="line">            return BinarySearch(arr, l, mid-1, x)</span><br><span class="line">        elif arr[mid] &lt; x:</span><br><span class="line">            return BinarySearch(arr, mid+1, r, x)</span><br><span class="line">    else:</span><br><span class="line">        return -1</span><br></pre></td></tr></table></figure>
-
-<p>Linear Search is easy, but</p>
-<img src="/2020/02/25/Algorithm-Binary-Search/refuse.png" title="This is an image">
       
 
       
@@ -198,11 +204,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Binary Search</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
         		</li>
       		
 		</ul>
@@ -221,18 +223,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/29/SQL-vs-NoSQL/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SQL vs NoSQL
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/24/Data-structure-notes/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Data structure notes</div>
+    <a href="/2020/03/25/Cookies-and-Sessions/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Cookies and Sessions</div>
       <i class="icon-circle-right"></i>
     </a>
   
