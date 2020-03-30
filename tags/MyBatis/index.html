@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java Overloading and Overriding | HKD</title>
+  <title>Tag: MyBatis | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java - Overloading and OverridingOverloading in JavaOverloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameter">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java Overloading and Overriding">
-<meta property="og:url" content="http://yoursite.com/2020/03/12/Java-Overloading-and-Overriding/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="HKD">
+<meta property="og:url" content="http://yoursite.com/tags/MyBatis/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Java - Overloading and OverridingOverloading in JavaOverloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameter">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://media.geeksforgeeks.org/wp-content/uploads/OverridingVsOverloading.png">
-<meta property="og:updated_time" content="2020-03-13T01:49:28.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Overloading and Overriding">
-<meta name="twitter:description" content="Java - Overloading and OverridingOverloading in JavaOverloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameter">
-<meta name="twitter:image" content="https://media.geeksforgeeks.org/wp-content/uploads/OverridingVsOverloading.png">
+<meta name="twitter:title" content="HKD">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -147,117 +140,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java-Overloading-and-Overriding" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Java Overloading and Overriding
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/03/29/MyBatis-Overview/" class="archive-article-date">
+  	<time datetime="2020-03-30T03:44:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/03/29/MyBatis-Overview/">MyBatis - Overview</a>
     </h1>
   
 
-        
-        <a href="/2020/03/12/Java-Overloading-and-Overriding/" class="archive-article-date">
-  	<time datetime="2020-03-13T01:48:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Java-Overloading-and-Overriding"><a href="#Java-Overloading-and-Overriding" class="headerlink" title="Java - Overloading and Overriding"></a>Java - Overloading and Overriding</h1><h2 id="Overloading-in-Java"><a href="#Overloading-in-Java" class="headerlink" title="Overloading in Java"></a>Overloading in Java</h2><p>Overloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameters or type of input parameters or both. Overloading is related to compile-time (or static) polymorphism.</p>
-<a id="more"></a>
-<p>We cannot overload by return type. This behavior is same in C++. Refer this for details</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// Java program to demonstrate working of method </span><br><span class="line">// overloading in Java. </span><br><span class="line">  </span><br><span class="line">public class Sum &#123; </span><br><span class="line">  </span><br><span class="line">    // Overloaded sum(). This sum takes two int parameters </span><br><span class="line">    public int sum(int x, int y) </span><br><span class="line">    &#123; </span><br><span class="line">        return (x + y); </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    // Overloaded sum(). This sum takes three int parameters </span><br><span class="line">    public int sum(int x, int y, int z) </span><br><span class="line">    &#123; </span><br><span class="line">        return (x + y + z); </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    // Overloaded sum(). This sum takes two double parameters </span><br><span class="line">    public double sum(double x, double y) </span><br><span class="line">    &#123; </span><br><span class="line">        return (x + y); </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    // Driver code </span><br><span class="line">    public static void main(String args[]) </span><br><span class="line">    &#123; </span><br><span class="line">        Sum s = new Sum(); </span><br><span class="line">        System.out.println(s.sum(10, 20)); </span><br><span class="line">        System.out.println(s.sum(10, 20, 30)); </span><br><span class="line">        System.out.println(s.sum(10.5, 20.5)); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="What-is-the-advantage"><a href="#What-is-the-advantage" class="headerlink" title="What is the advantage?"></a>What is the advantage?</h3><p>We don’t have to create and remember different names for functions doing the same thing. For example, in our code, if overloading was not supported by Java, we would have to create method names like sum1, sum2, … or sum2Int, sum3Int, … etc.</p>
-<h2 id="Overriding-in-Java"><a href="#Overriding-in-Java" class="headerlink" title="Overriding in Java"></a>Overriding in Java</h2><p>Overriding is a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. When a method in a subclass has the same name, same parameters or signature and same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to override the method in the super-class.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// Base Class </span><br><span class="line">class Parent &#123; </span><br><span class="line">    void show() </span><br><span class="line">    &#123; </span><br><span class="line">        System.out.println(&quot;Parent&apos;s show()&quot;); </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">  </span><br><span class="line">// Inherited class </span><br><span class="line">class Child extends Parent &#123; </span><br><span class="line">    // This method overrides show() of Parent </span><br><span class="line">    @Override</span><br><span class="line">    void show() </span><br><span class="line">    &#123; </span><br><span class="line">        System.out.println(&quot;Child&apos;s show()&quot;); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="What-is-the-difference-between-Overloading-and-Overriding"><a href="#What-is-the-difference-between-Overloading-and-Overriding" class="headerlink" title="What is the difference between Overloading and Overriding?"></a>What is the difference between Overloading and Overriding?</h2><ul>
-<li>Overloading is about same function have different signatures. Overriding is about same function, same signature but different classes connected through inheritance.</li>
-<li>Overloading is an example of compiler time polymorphism and overriding is an example of run time polymorphism.</li>
-</ul>
-<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/OverridingVsOverloading.png" alt title="pic"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/03/15/HTTP-Methods/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          HTTP Methods
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/03/11/React-State/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">React State</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -288,9 +224,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
