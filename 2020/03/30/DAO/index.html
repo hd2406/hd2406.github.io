@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MongoDB note | HKD</title>
+  <title>DAO | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MongoDBhuMONGOus database -&amp;gt; MongoDB, lol">
-<meta name="keywords" content="MongoDB">
+  <meta name="description" content="Data Access Object PatternData Access Object Pattern or DAO pattern is used to separate low level data accessing API or operations from high level business services. Following are the participants in">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB note">
-<meta property="og:url" content="http://yoursite.com/2020/02/29/MongoDB-note/index.html">
+<meta property="og:title" content="DAO">
+<meta property="og:url" content="http://yoursite.com/2020/03/30/DAO/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="MongoDBhuMONGOus database -&amp;gt; MongoDB, lol">
+<meta property="og:description" content="Data Access Object PatternData Access Object Pattern or DAO pattern is used to separate low level data accessing API or operations from high level business services. Following are the participants in">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-01T03:47:06.745Z">
+<meta property="og:image" content="https://www.tutorialspoint.com/design_pattern/images/dao_pattern_uml_diagram.jpg">
+<meta property="og:updated_time" content="2020-03-31T03:23:50.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MongoDB note">
-<meta name="twitter:description" content="MongoDBhuMONGOus database -&amp;gt; MongoDB, lol">
+<meta name="twitter:title" content="DAO">
+<meta name="twitter:description" content="Data Access Object PatternData Access Object Pattern or DAO pattern is used to separate low level data accessing API or operations from high level business services. Following are the participants in">
+<meta name="twitter:image" content="https://www.tutorialspoint.com/design_pattern/images/dao_pattern_uml_diagram.jpg">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -145,55 +147,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MongoDB-note" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-DAO" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MongoDB note
+      DAO
     </h1>
   
 
         
-        <a href="/2020/02/29/MongoDB-note/" class="archive-article-date">
-  	<time datetime="2020-03-01T03:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-29</time>
+        <a href="/2020/03/30/DAO/" class="archive-article-date">
+  	<time datetime="2020-03-31T03:23:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><p>huMONGOus database -&gt; MongoDB, lol</p>
+        <h1 id="Data-Access-Object-Pattern"><a href="#Data-Access-Object-Pattern" class="headerlink" title="Data Access Object Pattern"></a>Data Access Object Pattern</h1><p><strong>Data Access Object Pattern</strong> or <strong>DAO</strong> pattern is used to separate low level data accessing API or operations from high level business services. Following are the participants in Data Access Object Pattern.</p>
 <a id="more"></a>
+<ul>
+<li><strong>Data Access Object Interface</strong> - This interface defines the standard operations to be performed on a model object(s).</li>
+<li><strong>Data Access Object concrete class</strong> - This class implements above interface. This class is responsible to get data from a data source which can be database / xml or any other storage mechanism.</li>
+<li><strong>Model Object or Value Object</strong> - This object is simple POJO containing get/set methods to store data retrieved using DAO class.</li>
+</ul>
+<h2 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h2><p>We are going to create a Student object acting as a Model or Value Object.StudentDao is Data Access Object Interface.StudentDaoImpl is concrete class implementing Data Access Object Interface. DaoPatternDemo, our demo class, will use StudentDao to demonstrate the use of Data Access Object pattern.</p>
+<p><img src="https://www.tutorialspoint.com/design_pattern/images/dao_pattern_uml_diagram.jpg" alt="N|Solid"></p>
+<h2 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h2><p>Create Value Object.</p>
+<p>Student.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">   private String name;</span><br><span class="line">   private int rollNo;</span><br><span class="line"></span><br><span class="line">   Student(String name, int rollNo)&#123;</span><br><span class="line">      this.name = name;</span><br><span class="line">      this.rollNo = rollNo;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public String getName() &#123;</span><br><span class="line">      return name;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void setName(String name) &#123;</span><br><span class="line">      this.name = name;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public int getRollNo() &#123;</span><br><span class="line">      return rollNo;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void setRollNo(int rollNo) &#123;</span><br><span class="line">      this.rollNo = rollNo;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="What-is-MongoDB"><a href="#What-is-MongoDB" class="headerlink" title="What is MongoDB?"></a>What is MongoDB?</h2><p>MongoDB is a document-oriented NoSQL database used for high volume data storage. MongoDB is a database which came into light around the mid-2000s. It falls under the category of a NoSQL database.</p>
-<p>MongoDB is a JSON document datastore. It allows you to store and query JSON style documents with a few smarts on top. This means that you can store objects with nested data all in one collection (collections are like tables for MongoDB).</p>
-<h2 id="MongoDB-Features"><a href="#MongoDB-Features" class="headerlink" title="MongoDB Features"></a>MongoDB Features</h2><ul>
-<li>Each database contains collections which in turn contains documents.</li>
-<li>The document structure is more in line with how developers construct their classes and objects in their respective programming languages.</li>
-<li>The rows (or documents as called in MongoDB) doesn’t need to have a schema defined beforehand.</li>
-<li>The data model available within MongoDB allows you to represent hierarchical relationships.</li>
-<li>The MongoDB environments are very scalable.</li>
-</ul>
-<h2 id="Key-Components"><a href="#Key-Components" class="headerlink" title="Key Components"></a>Key Components</h2><ul>
-<li><strong>_id</strong> – This is a field required in every MongoDB document. The _id field represents a unique value in the MongoDB document. </li>
-<li><strong>Collection</strong> – This is a grouping of MongoDB documents. A collection is the equivalent of a table which is created in any other RDMS such as Oracle or MS SQL.</li>
-<li><strong>Cursor</strong> – This is a pointer to the result set of a query.</li>
-<li><strong>Database</strong> – This is a container for collections like in RDMS wherein it is a container for tables. </li>
-<li><strong>Document</strong> - A record in a MongoDB collection is basically called a document. </li>
-<li><strong>Field</strong> - A name-value pair in a document. </li>
-<li><strong>JSON</strong> – This is known as JavaScript Object Notation. This is a human-readable, plain text format for expressing structured data. </li>
-</ul>
-<h2 id="Why-Use-MongoDB"><a href="#Why-Use-MongoDB" class="headerlink" title="Why Use MongoDB?"></a>Why Use MongoDB?</h2><ul>
-<li>It stores the data in documents. This makes MongoDB very flexible and adaptable to real business world situation and requirements.</li>
-<li>MongoDB supports searching by field, range queries, and regular expression searches.</li>
-<li>Indexes can be created to improve the performance of searches within MongoDB. </li>
-<li>Replication - MongoDB can provide high availability with replica sets. A replica set consists of two or more mongo DB instances. Each replica set member may act in the role of the primary or secondary replica at any time. The primary replica is the main server which interacts with the client and performs all the read/write operations. The Secondary replicas maintain a copy of the data of the primary using built-in replication. When a primary replica fails, the replica set automatically switches over to the secondary and then it becomes the primary server.</li>
-<li>Load balancing - MongoDB uses the concept of sharding to scale horizontally by splitting data across multiple MongoDB instances. MongoDB can run over multiple servers, balancing the load and/or duplicating data to keep the system up and running in case of hardware failure.</li>
-</ul>
+<h2 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h2><p>Create Data Access Object Interface.</p>
+<p>StudentDao.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public interface StudentDao &#123;</span><br><span class="line">   public List&lt;Student&gt; getAllStudents();</span><br><span class="line">   public Student getStudent(int rollNo);</span><br><span class="line">   public void updateStudent(Student student);</span><br><span class="line">   public void deleteStudent(Student student);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h2><p>Create concrete class implementing above interface.</p>
+<p>StudentDaoImpl.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public class StudentDaoImpl implements StudentDao &#123;</span><br><span class="line">	</span><br><span class="line">   //list is working as a database</span><br><span class="line">   List&lt;Student&gt; students;</span><br><span class="line"></span><br><span class="line">   public StudentDaoImpl()&#123;</span><br><span class="line">      students = new ArrayList&lt;Student&gt;();</span><br><span class="line">      Student student1 = new Student(&quot;Robert&quot;,0);</span><br><span class="line">      Student student2 = new Student(&quot;John&quot;,1);</span><br><span class="line">      students.add(student1);</span><br><span class="line">      students.add(student2);		</span><br><span class="line">   &#125;</span><br><span class="line">   @Override</span><br><span class="line">   public void deleteStudent(Student student) &#123;</span><br><span class="line">      students.remove(student.getRollNo());</span><br><span class="line">      System.out.println(&quot;Student: Roll No &quot; + student.getRollNo() + &quot;, deleted from database&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   //retrive list of students from the database</span><br><span class="line">   @Override</span><br><span class="line">   public List&lt;Student&gt; getAllStudents() &#123;</span><br><span class="line">      return students;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public Student getStudent(int rollNo) &#123;</span><br><span class="line">      return students.get(rollNo);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public void updateStudent(Student student) &#123;</span><br><span class="line">      students.get(student.getRollNo()).setName(student.getName());</span><br><span class="line">      System.out.println(&quot;Student: Roll No &quot; + student.getRollNo() + &quot;, updated in the database&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h2><p>Use the StudentDao to demonstrate Data Access Object pattern usage.</p>
+<p>DaoPatternDemo.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class DaoPatternDemo &#123;</span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line">      StudentDao studentDao = new StudentDaoImpl();</span><br><span class="line"></span><br><span class="line">      //print all students</span><br><span class="line">      for (Student student : studentDao.getAllStudents()) &#123;</span><br><span class="line">         System.out.println(&quot;Student: [RollNo : &quot; + student.getRollNo() + &quot;, Name : &quot; + student.getName() + &quot; ]&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      //update student</span><br><span class="line">      Student student =studentDao.getAllStudents().get(0);</span><br><span class="line">      student.setName(&quot;Michael&quot;);</span><br><span class="line">      studentDao.updateStudent(student);</span><br><span class="line"></span><br><span class="line">      //get the student</span><br><span class="line">      studentDao.getStudent(0);</span><br><span class="line">      System.out.println(&quot;Student: [RollNo : &quot; + student.getRollNo() + &quot;, Name : &quot; + student.getName() + &quot; ]&quot;);		</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-5"><a href="#Step-5" class="headerlink" title="Step 5"></a>Step 5</h2><p>Verify the output.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Student: [RollNo : 0, Name : Robert ]</span><br><span class="line">Student: [RollNo : 1, Name : John ]</span><br><span class="line">Student: Roll No 0, updated in the database</span><br><span class="line">Student: [RollNo : 0, Name : Michael ]</span><br></pre></td></tr></table></figure>
       
 
       
@@ -206,7 +206,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -225,18 +225,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/01/RESTful-basics/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          RESTful basics
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/29/SQL-vs-NoSQL/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SQL vs NoSQL</div>
+    <a href="/2020/03/29/MyBatis-Overview/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MyBatis - Overview</div>
       <i class="icon-circle-right"></i>
     </a>
   
