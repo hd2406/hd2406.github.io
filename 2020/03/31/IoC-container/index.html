@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: AJAX | HKD</title>
+  <title>IoC container | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HKD">
-<meta property="og:url" content="http://yoursite.com/tags/AJAX/index.html">
+  <meta name="description" content="IoC ContainerThe IoC container is responsible to instantiate, configure and assemble the objects.">
+<meta name="keywords" content="Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IoC container">
+<meta property="og:url" content="http://yoursite.com/2020/03/31/IoC-container/index.html">
 <meta property="og:site_name" content="HKD">
+<meta property="og:description" content="IoC ContainerThe IoC container is responsible to instantiate, configure and assemble the objects.">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-01T03:23:52.299Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HKD">
+<meta name="twitter:title" content="IoC container">
+<meta name="twitter:description" content="IoC ContainerThe IoC container is responsible to instantiate, configure and assemble the objects.">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -140,60 +145,140 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-IoC-container" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/26/AJAX/" class="archive-article-date">
-  	<time datetime="2020-03-27T03:19:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/26/AJAX/">AJAX</a>
+    <h1 class="article-title" itemprop="name">
+      IoC container
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/03/31/IoC-container/" class="archive-article-date">
+  	<time datetime="2020-04-01T03:06:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="IoC-Container"><a href="#IoC-Container" class="headerlink" title="IoC Container"></a>IoC Container</h1><p>The IoC container is responsible to instantiate, configure and assemble the objects. </p>
+<a id="more"></a>
+<p>The IoC container gets informations from the XML file and works accordingly. The main tasks performed by IoC container are:</p>
+<ul>
+<li>to instantiate the application class</li>
+<li>to configure the object</li>
+<li>to assemble the dependencies between the objects</li>
+</ul>
+<p>There are two types of IoC containers. They are:</p>
+<ol>
+<li>BeanFactory</li>
+<li>ApplicationContext</li>
+</ol>
+<h2 id="Difference-between-BeanFactory-and-the-ApplicationContext"><a href="#Difference-between-BeanFactory-and-the-ApplicationContext" class="headerlink" title="Difference between BeanFactory and the ApplicationContext"></a>Difference between BeanFactory and the ApplicationContext</h2><p>The org.springframework.beans.factory.BeanFactory and the org.springframework.context.ApplicationContext interfaces acts as the IoC container. The ApplicationContext interface is built on top of the BeanFactory interface. It adds some extra functionality than BeanFactory such as simple integration with Spring’s AOP, message resource handling (for I18N), event propagation, application layer specific context (e.g. WebApplicationContext) for web application. So it is better to use ApplicationContext than BeanFactory.</p>
+<h2 id="Using-BeanFactory"><a href="#Using-BeanFactory" class="headerlink" title="Using BeanFactory"></a>Using BeanFactory</h2><p>The XmlBeanFactory is the implementation class for the BeanFactory interface. To use the BeanFactory, we need to create the instance of XmlBeanFactory class as given below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Resource resource=new ClassPathResource(&quot;applicationContext.xml&quot;);  </span><br><span class="line">BeanFactory factory=new XmlBeanFactory(resource);</span><br></pre></td></tr></table></figure>
+
+<p>The constructor of XmlBeanFactory class receives the Resource object so we need to pass the resource object to create the object of BeanFactory.</p>
+<h2 id="Using-ApplicationContext"><a href="#Using-ApplicationContext" class="headerlink" title="Using ApplicationContext"></a>Using ApplicationContext</h2><p>The ClassPathXmlApplicationContext class is the implementation class of ApplicationContext interface. We need to instantiate the ClassPathXmlApplicationContext class to use the ApplicationContext as given below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext context =   </span><br><span class="line">    new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>The constructor of ClassPathXmlApplicationContext class receives string, so we can pass the name of the xml file to create the instance of ApplicationContext.</p>
+<h2 id="XML-configuration"><a href="#XML-configuration" class="headerlink" title="XML configuration"></a>XML configuration</h2><p>First we need a JavaBean class:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line"></span><br><span class="line">    private String id;</span><br><span class="line">    private String username;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public String getId() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setId(String id) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getUsername() &#123;</span><br><span class="line">        return username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setUsername(String username) &#123;</span><br><span class="line">        this.username = username;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In applicationContext.xml:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;user&quot; class=&quot;User&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Then</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext ac = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line"></span><br><span class="line">User user = (User) ac.getBean(&quot;user&quot;);</span><br><span class="line"></span><br><span class="line">System.out.println(user);</span><br></pre></td></tr></table></figure>
+
+<p>This is how we create a object without constructor parameters.</p>
+<h2 id="How-to-create-a-object-with-constructor-parameters"><a href="#How-to-create-a-object-with-constructor-parameters" class="headerlink" title="How to create a object with constructor parameters"></a>How to create a object with constructor parameters</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public User(String id, String username) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">        this.username = username;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>In applicationContext.xml:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;user&quot; class=&quot;User&quot;&gt;</span><br><span class="line">    &lt;constructor-arg index=&quot;0&quot; name=&quot;id&quot; type=&quot;java.lang.String&quot; </span><br><span class="line">    value=&quot;1&quot;&gt;&lt;/constructor-arg&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;constructor-arg index=&quot;1&quot; name=&quot;username&quot; type=&quot;java.lang.String&quot;</span><br><span class="line">    value=&quot;abc&quot;&gt;&lt;/constructor-arg&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+
+<p>If the value of constructor is an object, use ref instead of value:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;person&quot; class=&quot;Person&quot;&gt;&lt;/bean&gt; </span><br><span class="line"></span><br><span class="line">&lt;bean id=&quot;user&quot; class=&quot;User&quot; &gt;</span><br><span class="line">    &lt;constructor-arg index=&quot;0&quot; name=&quot;id&quot; type=&quot;java.lang.String&quot; </span><br><span class="line">    value=&quot;1&quot;&gt;&lt;/constructor-arg&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;constructor-arg index=&quot;1&quot; name=&quot;username&quot; type=&quot;java.lang.String&quot;</span><br><span class="line">    ref=&quot;person&quot;&gt;&lt;/constructor-arg&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Static-Factory-method"><a href="#Static-Factory-method" class="headerlink" title="Static Factory method"></a>Static Factory method</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Factory &#123;</span><br><span class="line"></span><br><span class="line">    public static User getBean() &#123;</span><br><span class="line"></span><br><span class="line">        return new User();</span><br><span class="line">    &#125;</span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;user&quot; class=&quot;Factory&quot; factory-method=&quot;getBean&quot; &gt;</span><br><span class="line"></span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Non-Static-Factory-method"><a href="#Non-Static-Factory-method" class="headerlink" title="Non - Static Factory method"></a>Non - Static Factory method</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Factory &#123;</span><br><span class="line"></span><br><span class="line">    public static User getBean() &#123;</span><br><span class="line"></span><br><span class="line">        return new User();</span><br><span class="line">    &#125;</span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;factory&quot; class=&quot;Factory&quot;/&gt;</span><br><span class="line"></span><br><span class="line">&lt;bean id=&quot;user&quot; class=&quot;User&quot; factory-bean=&quot;factory&quot; factory-method=&quot;getBean&quot;/&gt;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/03/30/DAO/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DAO</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -224,9 +309,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
