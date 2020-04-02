@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Algorithm Binary Search | HKD</title>
+  <title>HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
-<meta name="keywords" content="Algorithm,Binary Search">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Algorithm Binary Search">
-<meta property="og:url" content="http://yoursite.com/2020/02/25/Algorithm-Binary-Search/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="HKD">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-02T03:31:15.847Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Algorithm Binary Search">
-<meta name="twitter:description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
+<meta name="twitter:title" content="HKD">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -145,45 +140,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Algorithm-Binary-Search" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-How to make website like this on Windows" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Algorithm Binary Search
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/23/How to make website like this on Windows/">How to make website like this on Windows</a>
     </h1>
   
 
         
-        <a href="/2020/02/25/Algorithm-Binary-Search/" class="archive-article-date">
-  	<time datetime="2020-02-26T02:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+        <a href="/2020/02/23/How to make website like this on Windows/" class="archive-article-date">
+  	<time datetime="2020-02-23T19:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h1><p>A simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.</p>
-<a id="more"></a>
-
-<p><strong>WHAT is Binary Search ?</strong><br>Binary Search searches a sorted array by repeatedly dividing the search interval by half.</p>
+        <h1 id="Hexo-blog-framework"><a href="#Hexo-blog-framework" class="headerlink" title="Hexo blog framework"></a>Hexo blog framework</h1><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> is a fast, simple &amp; powerful blog framework. </p>
 <ul>
-<li>Sorted the array</li>
-<li>Begin with the interval covering the whole array</li>
-<li>If the middle value of the interval is less than the target -&gt; go to the greater half. Vise versa.</li>
-<li>Repeatedly to narrow the interval until found it or the interval is empty</li>
+<li>Incredible generating speed powered by Node.js</li>
+<li>All features of GitHub Flavored Markdown are supported, including most Octopress plugins.</li>
+<li>One command to deploy your site to GitHub Pages</li>
+<li>Features powerful APIs for limitless extensibility.</li>
 </ul>
-<p>The time complexity is reduced to O(logN).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n) = T(n/2) + c</span><br></pre></td></tr></table></figure>
-
-<h2 id="Python3-iterative"><a href="#Python3-iterative" class="headerlink" title="Python3 iterative"></a>Python3 iterative</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def BinarySearch(arr, l, r, x):</span><br><span class="line">    while r &gt;= l:</span><br><span class="line">        mid = l + (r - 1) // 2</span><br><span class="line">    </span><br><span class="line">        if arr[mid] == x:</span><br><span class="line">            return mid</span><br><span class="line">        elif arr[mid] &gt; x:</span><br><span class="line">            r = mid - 1</span><br><span class="line">        else &lt; x:</span><br><span class="line">            l = mid +1</span><br><span class="line">    return -1</span><br></pre></td></tr></table></figure>
-
-<h2 id="Python3-recursive"><a href="#Python3-recursive" class="headerlink" title="Python3 recursive"></a>Python3 recursive</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def BinarySearch(arr, l, r, x):</span><br><span class="line">    if r &gt;= l:</span><br><span class="line">        mid = l + (r - 1) // 2</span><br><span class="line">    </span><br><span class="line">        if arr[mid] == x:</span><br><span class="line">            return mid</span><br><span class="line">        elif arr[mid] &gt; x:</span><br><span class="line">            return BinarySearch(arr, l, mid-1, x)</span><br><span class="line">        elif arr[mid] &lt; x:</span><br><span class="line">            return BinarySearch(arr, mid+1, r, x)</span><br><span class="line">    else:</span><br><span class="line">        return -1</span><br></pre></td></tr></table></figure>
-
-<p>Linear Search is easy, but</p>
-
+        
+          <a class="article-more-a" href="/2020/02/23/How to make website like this on Windows/#more">more >></a>
+        
       
 
       
@@ -196,11 +184,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Binary Search</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
         		</li>
       		
 		</ul>
@@ -209,33 +193,16 @@
       
 
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/23/How to make website like this on Windows/">More >></a>
+        </p>
+      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/02/29/SQL-vs-NoSQL/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SQL vs NoSQL
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/02/24/Data-structure-notes/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Data structure notes</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -255,14 +222,12 @@
 
 
 
-  
-  
-  
 
   
-
   
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
   
 
 
@@ -293,8 +258,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

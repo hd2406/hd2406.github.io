@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Algorithm Binary Search | HKD</title>
+  <title>Spring AOP | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
-<meta name="keywords" content="Algorithm,Binary Search">
+  <meta name="description" content="Spring AOPSpring AOP enables Aspect-Oriented Programming in spring applications. In AOP, aspects enable the modularization of concerns such as transaction management, logging or security that cut acro">
+<meta name="keywords" content="Spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Algorithm Binary Search">
-<meta property="og:url" content="http://yoursite.com/2020/02/25/Algorithm-Binary-Search/index.html">
+<meta property="og:title" content="Spring AOP">
+<meta property="og:url" content="http://yoursite.com/2020/04/01/Spring-AOP/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
+<meta property="og:description" content="Spring AOPSpring AOP enables Aspect-Oriented Programming in spring applications. In AOP, aspects enable the modularization of concerns such as transaction management, logging or security that cut acro">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-02T03:31:15.847Z">
+<meta property="og:updated_time" content="2020-04-02T03:52:40.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Algorithm Binary Search">
-<meta name="twitter:description" content="Binary SearchA simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.">
+<meta name="twitter:title" content="Spring AOP">
+<meta name="twitter:description" content="Spring AOPSpring AOP enables Aspect-Oriented Programming in spring applications. In AOP, aspects enable the modularization of concerns such as transaction management, logging or security that cut acro">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -145,45 +145,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Algorithm-Binary-Search" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Spring-AOP" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Algorithm Binary Search
+      Spring AOP
     </h1>
   
 
         
-        <a href="/2020/02/25/Algorithm-Binary-Search/" class="archive-article-date">
-  	<time datetime="2020-02-26T02:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+        <a href="/2020/04/01/Spring-AOP/" class="archive-article-date">
+  	<time datetime="2020-04-02T03:51:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h1><p>A simple way to search elements in arrays is to use linear search but the time complexity is usually O(n). In stead, we use binary search.</p>
-<a id="more"></a>
+        <h1 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h1><p>Spring AOP enables Aspect-Oriented Programming in spring applications. In AOP, aspects enable the modularization of concerns such as transaction management, logging or security that cut across multiple types and objects (often termed crosscutting concerns).</p>
+<p>AOP provides the way to dynamically add the cross-cutting concern before, after or around the actual logic using simple pluggable configurations. It makes easy to maintain code in the present and future as well. You can add/remove concerns without recompiling complete sourcecode simply by changing configuration files (if you are applying aspects suing XML configuration).</p>
+<h2 id="What-is-advice-joinpoint-and-pointcut"><a href="#What-is-advice-joinpoint-and-pointcut" class="headerlink" title="What is advice, joinpoint and pointcut"></a>What is advice, joinpoint and pointcut</h2><ol>
+<li>An important term in AOP is advice. It is the action taken by an aspect at a particular join-point.</li>
+<li>Joinpoint is a point of execution of the program, such as the execution of a method or the handling of an exception. In Spring AOP, a joinpoint always represents a method execution.</li>
+<li>Pointcut is a predicate or expression that matches join points.</li>
+<li>Advice is associated with a pointcut expression and runs at any join point matched by the pointcut.</li>
+<li>Spring uses the AspectJ pointcut expression language by default.</li>
+</ol>
+<h2 id="Types-of-AOP-advices"><a href="#Types-of-AOP-advices" class="headerlink" title="Types of AOP advices"></a>Types of AOP advices</h2><p>There are five types of advice in spring AOP.</p>
+<ol>
+<li>Before advice: Advice that executes before a join point, but which does not have the ability to prevent execution flow proceeding to the join point (unless it throws an exception).</li>
+<li>After returning advice: Advice to be executed after a join point completes normally: for example, if a method returns without throwing an exception.</li>
+<li>After throwing advice: Advice to be executed if a method exits by throwing an exception.</li>
+<li>After advice: Advice to be executed regardless of the means by which a join point exits (normal or exceptional return).</li>
+<li>Around advice: Advice that surrounds a join point such as a method invocation. This is the most powerful kind of advice. Around advice can perform custom behavior before and after the method invocation. It is also responsible for choosing whether to proceed to the join point or to shortcut the advised method execution by returning its own return value or throwing an exception.</li>
+</ol>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>pom.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.1.4.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.1.4.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.1.4.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.aspectj&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;aspectjrt&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.6.11&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.aspectj&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.6.11&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>WHAT is Binary Search ?</strong><br>Binary Search searches a sorted array by repeatedly dividing the search interval by half.</p>
-<ul>
-<li>Sorted the array</li>
-<li>Begin with the interval covering the whole array</li>
-<li>If the middle value of the interval is less than the target -&gt; go to the greater half. Vise versa.</li>
-<li>Repeatedly to narrow the interval until found it or the interval is empty</li>
-</ul>
-<p>The time complexity is reduced to O(logN).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n) = T(n/2) + c</span><br></pre></td></tr></table></figure>
+<p>Enable AOP configuration in Spring applications.</p>
+<p>AopConfig.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableAspectJAutoProxy</span><br><span class="line">public class AopConfig &#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Python3-iterative"><a href="#Python3-iterative" class="headerlink" title="Python3 iterative"></a>Python3 iterative</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def BinarySearch(arr, l, r, x):</span><br><span class="line">    while r &gt;= l:</span><br><span class="line">        mid = l + (r - 1) // 2</span><br><span class="line">    </span><br><span class="line">        if arr[mid] == x:</span><br><span class="line">            return mid</span><br><span class="line">        elif arr[mid] &gt; x:</span><br><span class="line">            r = mid - 1</span><br><span class="line">        else &lt; x:</span><br><span class="line">            l = mid +1</span><br><span class="line">    return -1</span><br></pre></td></tr></table></figure>
+<p>Write aspect class annotated with @Aspect annotation and write point-cut expressions to match joint-point methods.</p>
+<p>EmployeeCRUDAspect.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@Aspect</span><br><span class="line">public class EmployeeCRUDAspect &#123;</span><br><span class="line">      </span><br><span class="line">    @Before(&quot;execution(* EmployeeManager.getEmployeeById(..))&quot;)         //point-cut expression</span><br><span class="line">    public void logBeforeV1(JoinPoint joinPoint)</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(&quot;EmployeeCRUDAspect.logBeforeV1() : &quot; + joinPoint.getSignature().getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Python3-recursive"><a href="#Python3-recursive" class="headerlink" title="Python3 recursive"></a>Python3 recursive</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def BinarySearch(arr, l, r, x):</span><br><span class="line">    if r &gt;= l:</span><br><span class="line">        mid = l + (r - 1) // 2</span><br><span class="line">    </span><br><span class="line">        if arr[mid] == x:</span><br><span class="line">            return mid</span><br><span class="line">        elif arr[mid] &gt; x:</span><br><span class="line">            return BinarySearch(arr, l, mid-1, x)</span><br><span class="line">        elif arr[mid] &lt; x:</span><br><span class="line">            return BinarySearch(arr, mid+1, r, x)</span><br><span class="line">    else:</span><br><span class="line">        return -1</span><br></pre></td></tr></table></figure>
+<p>Write methods on which you want to execute advices and those match with point-cut expressions.</p>
+<p>EmployeeManager.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">public class EmployeeManager</span><br><span class="line">&#123;</span><br><span class="line">    public EmployeeDTO getEmployeeById(Integer employeeId) &#123;</span><br><span class="line">        System.out.println(&quot;Method getEmployeeById() called&quot;);</span><br><span class="line">        return new EmployeeDTO();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Linear Search is easy, but</p>
+<p>In above example, logBeforeV1() will be executed before getEmployeeById() method because it matches the join-point expression.</p>
+<p>Run the application and watch the console.</p>
+<p>TestAOP.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class TestAOP</span><br><span class="line">&#123;</span><br><span class="line">    @SuppressWarnings(&quot;resource&quot;)</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">  </span><br><span class="line">        ApplicationContext context = new ClassPathXmlApplicationContext</span><br><span class="line">                            (&quot;com/howtodoinjava/demo/aop/applicationContext.xml&quot;);</span><br><span class="line"> </span><br><span class="line">        EmployeeManager manager = context.getBean(EmployeeManager.class);</span><br><span class="line">  </span><br><span class="line">        manager.getEmployeeById(1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>Program output:</p>
+<p>Console</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">EmployeeCRUDAspect.logBeforeV1() : getEmployeeById</span><br><span class="line">Method getEmployeeById() called</span><br></pre></td></tr></table></figure>
       
 
       
@@ -196,11 +217,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Binary Search</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
@@ -219,18 +236,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/29/SQL-vs-NoSQL/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SQL vs NoSQL
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/24/Data-structure-notes/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Data structure notes</div>
+    <a href="/2020/03/31/IoC-container/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">IoC container</div>
       <i class="icon-circle-right"></i>
     </a>
   
