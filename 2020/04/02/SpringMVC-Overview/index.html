@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | HKD</title>
+  <title>SpringMVC Overview | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HKD">
-<meta property="og:url" content="http://yoursite.com/archives/2020/page/4/index.html">
+  <meta name="description" content="SpringMVC OverviewThe Spring Web MVC framework provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications.">
+<meta name="keywords" content="SpringMVC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringMVC Overview">
+<meta property="og:url" content="http://yoursite.com/2020/04/02/SpringMVC-Overview/index.html">
 <meta property="og:site_name" content="HKD">
+<meta property="og:description" content="SpringMVC OverviewThe Spring Web MVC framework provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications.">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-03T01:57:39.601Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HKD">
+<meta name="twitter:title" content="SpringMVC Overview">
+<meta name="twitter:description" content="SpringMVC OverviewThe Spring Web MVC framework provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications.">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -140,105 +145,127 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SpringMVC-Overview" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/" class="archive-article-date">
-  	<time datetime="2020-02-24T02:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/How-to-make-website-like-this-on-Windows-II/">How to make website like this on Windows II</a>
+    <h1 class="article-title" itemprop="name">
+      SpringMVC Overview
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/02/SpringMVC-Overview/" class="archive-article-date">
+  	<time datetime="2020-04-03T01:57:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="SpringMVC-Overview"><a href="#SpringMVC-Overview" class="headerlink" title="SpringMVC Overview"></a>SpringMVC Overview</h1><p>The Spring Web MVC framework provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications. </p>
+<a id="more"></a>
+<p>The MVC pattern results in separating the different aspects of the application (input logic, business logic, and UI logic), while providing a loose coupling between these elements.</p>
+<ul>
+<li>The <strong>Model</strong> encapsulates the application data and in general they will consist of POJO.</li>
+<li>The <strong>View</strong> is responsible for rendering the model data and in general it generates HTML output that the client’s browser can interpret.</li>
+<li>The <strong>Controller</strong> is responsible for processing user requests and building an appropriate model and passes it to the view for rendering.</li>
+</ul>
+<h2 id="The-DispatcherServlet"><a href="#The-DispatcherServlet" class="headerlink" title="The DispatcherServlet"></a>The DispatcherServlet</h2><p>The Spring Web model-view-controller (MVC) framework is designed around a DispatcherServlet that handles all the HTTP requests and responses. </p>
+<p>Following is the sequence of events corresponding to an incoming HTTP request to DispatcherServlet −</p>
+<ul>
+<li>After receiving an HTTP request, <strong>DispatcherServlet</strong> consults the <strong>HandlerMapping</strong> to call the appropriate <strong>Controller</strong>.</li>
+<li>The <strong>Controller</strong> takes the request and calls the appropriate service methods based on used GET or POST method. The service method will set model data based on defined business logic and returns view name to the <strong>DispatcherServlet</strong>.</li>
+<li>The <strong>DispatcherServlet</strong> will take help from <strong>ViewResolver</strong> to pickup the defined view for the request.</li>
+<li>Once view is finalized, The <strong>DispatcherServlet</strong> passes the model data to the view which is finally rendered on the browser.</li>
+</ul>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>web.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;web-app id = &quot;WebApp_ID&quot; version = &quot;2.4&quot;</span><br><span class="line">   xmlns = &quot;http://java.sun.com/xml/ns/j2ee&quot; </span><br><span class="line">   xmlns:xsi = &quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">   xsi:schemaLocation = &quot;http://java.sun.com/xml/ns/j2ee </span><br><span class="line">   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;</span><br><span class="line">    </span><br><span class="line">   &lt;display-name&gt;Spring MVC Application&lt;/display-name&gt;</span><br><span class="line">   </span><br><span class="line">   &lt;servlet&gt;</span><br><span class="line">      &lt;servlet-name&gt;HelloWeb&lt;/servlet-name&gt;</span><br><span class="line">      &lt;servlet-class&gt;</span><br><span class="line">         org.springframework.web.servlet.DispatcherServlet</span><br><span class="line">      &lt;/servlet-class&gt;</span><br><span class="line">      &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</span><br><span class="line">   &lt;/servlet&gt;</span><br><span class="line"></span><br><span class="line">   &lt;servlet-mapping&gt;</span><br><span class="line">      &lt;servlet-name&gt;HelloWeb&lt;/servlet-name&gt;</span><br><span class="line">      &lt;url-pattern&gt;*.jsp&lt;/url-pattern&gt;</span><br><span class="line">   &lt;/servlet-mapping&gt;</span><br><span class="line"></span><br><span class="line">&lt;/web-app&gt;</span><br></pre></td></tr></table></figure>
+
+<p>[servlet-name]-servlet.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;web-app...&gt;</span><br><span class="line"></span><br><span class="line">   &lt;!-------- DispatcherServlet definition goes here-----&gt;</span><br><span class="line">   ....</span><br><span class="line">   &lt;context-param&gt;</span><br><span class="line">      &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</span><br><span class="line">      &lt;param-value&gt;/WEB-INF/HelloWeb-servlet.xml&lt;/param-value&gt;</span><br><span class="line">   &lt;/context-param&gt;</span><br><span class="line"></span><br><span class="line">   &lt;listener&gt;</span><br><span class="line">      &lt;listener-class&gt;</span><br><span class="line">         org.springframework.web.context.ContextLoaderListener</span><br><span class="line">      &lt;/listener-class&gt;</span><br><span class="line">   &lt;/listener&gt;</span><br><span class="line">   </span><br><span class="line">&lt;/web-app&gt;</span><br></pre></td></tr></table></figure>
+
+<p>servlet.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;beans xmlns = &quot;http://www.springframework.org/schema/beans&quot;</span><br><span class="line">   xmlns:context = &quot;http://www.springframework.org/schema/context&quot;</span><br><span class="line">   xmlns:xsi = &quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">   xsi:schemaLocation = &quot;http://www.springframework.org/schema/beans     </span><br><span class="line">   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd</span><br><span class="line">   http://www.springframework.org/schema/context </span><br><span class="line">   http://www.springframework.org/schema/context/spring-context-3.0.xsd&quot;&gt;</span><br><span class="line"></span><br><span class="line">   &lt;context:component-scan base-package = &quot;com.tutorialspoint&quot; /&gt;</span><br><span class="line"></span><br><span class="line">   &lt;bean class = &quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;</span><br><span class="line">      &lt;property name = &quot;prefix&quot; value = &quot;/WEB-INF/jsp/&quot; /&gt;</span><br><span class="line">      &lt;property name = &quot;suffix&quot; value = &quot;.jsp&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line"></span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Following are the important points about HelloWeb-servlet.xml file −</p>
+<ul>
+<li><p>The [servlet-name]-servlet.xml file will be used to create the beans defined, overriding the definitions of any beans defined with the same name in the global scope.</p>
+</li>
+<li><p>The <a href="context:component-scan..." target="_blank" rel="noopener">context:component-scan...</a> tag will be use to activate Spring MVC annotation scanning capability which allows to make use of annotations like @Controller and @RequestMapping etc.</p>
+</li>
+<li><p>The InternalResourceViewResolver will have rules defined to resolve the view names. As per the above defined rule, a logical view named hello is delegated to a view implementation located at /WEB-INF/jsp/hello.jsp </p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/How to make website like this on Windows/" class="archive-article-date">
-  	<time datetime="2020-02-23T19:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/01/Spring-AOP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring AOP</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/How to make website like this on Windows/">How to make website like this on Windows</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><a class="page-number" href="/archives/2020/page/2/">2</a><a class="page-number" href="/archives/2020/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
+  
+
   
 
 
@@ -270,8 +297,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
