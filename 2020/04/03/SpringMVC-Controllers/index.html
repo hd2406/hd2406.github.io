@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Reflection in Java | HKD</title>
+  <title>SpringMVC Controllers | HKD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Reflection in JavaReflection is an API which is used to examine or modify the behavior of methods, classes, interfaces at runtime.">
-<meta name="keywords" content="Java">
+  <meta name="description" content="SpringMVC ControllersControllers provide access to the application behavior that you typically define through a service interface. Controllers interpret user input and transform it into a model that i">
+<meta name="keywords" content="SpringMVC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Reflection in Java">
-<meta property="og:url" content="http://yoursite.com/2020/03/23/Reflection-in-Java/index.html">
+<meta property="og:title" content="SpringMVC Controllers">
+<meta property="og:url" content="http://yoursite.com/2020/04/03/SpringMVC-Controllers/index.html">
 <meta property="og:site_name" content="HKD">
-<meta property="og:description" content="Reflection in JavaReflection is an API which is used to examine or modify the behavior of methods, classes, interfaces at runtime.">
+<meta property="og:description" content="SpringMVC ControllersControllers provide access to the application behavior that you typically define through a service interface. Controllers interpret user input and transform it into a model that i">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-24T00:34:24.794Z">
+<meta property="og:updated_time" content="2020-04-04T02:40:13.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Reflection in Java">
-<meta name="twitter:description" content="Reflection in JavaReflection is an API which is used to examine or modify the behavior of methods, classes, interfaces at runtime.">
+<meta name="twitter:title" content="SpringMVC Controllers">
+<meta name="twitter:description" content="SpringMVC ControllersControllers provide access to the application behavior that you typically define through a service interface. Controllers interpret user input and transform it into a model that i">
   
     <link rel="alternative" href="/atom.xml" title="HKD" type="application/atom+xml">
   
@@ -145,53 +145,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Reflection-in-Java" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-SpringMVC-Controllers" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Reflection in Java
+      SpringMVC Controllers
     </h1>
   
 
         
-        <a href="/2020/03/23/Reflection-in-Java/" class="archive-article-date">
-  	<time datetime="2020-03-24T00:33:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
+        <a href="/2020/04/03/SpringMVC-Controllers/" class="archive-article-date">
+  	<time datetime="2020-04-04T02:39:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Reflection-in-Java"><a href="#Reflection-in-Java" class="headerlink" title="Reflection in Java"></a>Reflection in Java</h1><p>Reflection is an API which is used to examine or modify the behavior of methods, classes, interfaces at runtime.</p>
+        <h1 id="SpringMVC-Controllers"><a href="#SpringMVC-Controllers" class="headerlink" title="SpringMVC Controllers"></a>SpringMVC Controllers</h1><p>Controllers provide access to the application behavior that you typically define through a service interface. Controllers interpret user input and transform it into a model that is represented to the user by the view. Spring implements a controller in a very abstract way, which enables you to create a wide variety of controllers.</p>
 <a id="more"></a>
-<ul>
-<li>The required classes for reflection are provided under java.lang.reflect package.</li>
-<li>Reflection gives us information about the class to which an object belongs and also the methods of that class which can be executed by using the object.</li>
-<li>Through reflection we can invoke methods at runtime irrespective of the access specifier used with them.</li>
-</ul>
-<p>Official Definition:</p>
-<blockquote>
-<p>Reflection enables Java code to discover information about the fields, methods and constructors of loaded classes, and to use reflected fields, methods, and constructors to operate on their underlying counterparts, within security restrictions.<br>The API accommodates applications that need access to either the public members of a target object (based on its runtime class) or the members declared by a given class. It also allows programs to &gt;suppress default reflective access control.</p>
-</blockquote>
-<h2 id="Reflection-can-be-used-to-get-information"><a href="#Reflection-can-be-used-to-get-information" class="headerlink" title="Reflection can be used to get information"></a>Reflection can be used to get information</h2><ul>
-<li><strong>Class</strong> The getClass() method is used to get the name of the class to which an object belongs.</li>
-<li><strong>Constructors</strong> The getConstructors() method is used to get the public constructors of the class to which an object belongs.</li>
-<li><strong>Methods</strong> The getMethods() method is used to get the public methods of the class to which an objects belongs.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">// A simple Java program to demonstrate the use of reflection </span><br><span class="line">import java.lang.reflect.Method; </span><br><span class="line">import java.lang.reflect.Field; </span><br><span class="line">import java.lang.reflect.Constructor; </span><br><span class="line">  </span><br><span class="line">// class whose object is to be created </span><br><span class="line">class Test </span><br><span class="line">&#123; </span><br><span class="line">    // creating a private field </span><br><span class="line">    private String s; </span><br><span class="line">  </span><br><span class="line">    // creating a public constructor </span><br><span class="line">    public Test()  &#123;  s = &quot;GeeksforGeeks&quot;; &#125; </span><br><span class="line">  </span><br><span class="line">    // Creating a public method with no arguments </span><br><span class="line">    public void method1()  &#123; </span><br><span class="line">        System.out.println(&quot;The string is &quot; + s); </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    // Creating a public method with int as argument </span><br><span class="line">    public void method2(int n)  &#123; </span><br><span class="line">        System.out.println(&quot;The number is &quot; + n); </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    // creating a private method </span><br><span class="line">    private void method3() &#123; </span><br><span class="line">        System.out.println(&quot;Private method invoked&quot;); </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">  </span><br><span class="line">class Demo </span><br><span class="line">&#123; </span><br><span class="line">    public static void main(String args[]) throws Exception </span><br><span class="line">    &#123; </span><br><span class="line">        // Creating object whose property is to be checked </span><br><span class="line">        Test obj = new Test(); </span><br><span class="line">  </span><br><span class="line">        // Creating class object from the object using </span><br><span class="line">        // getclass method </span><br><span class="line">        Class cls = obj.getClass(); </span><br><span class="line">        System.out.println(&quot;The name of class is &quot; + </span><br><span class="line">                            cls.getName()); </span><br><span class="line">  </span><br><span class="line">        // Getting the constructor of the class through the </span><br><span class="line">        // object of the class </span><br><span class="line">        Constructor constructor = cls.getConstructor(); </span><br><span class="line">        System.out.println(&quot;The name of constructor is &quot; + </span><br><span class="line">                            constructor.getName()); </span><br><span class="line">  </span><br><span class="line">        System.out.println(&quot;The public methods of class are : &quot;); </span><br><span class="line">  </span><br><span class="line">        // Getting methods of the class through the object </span><br><span class="line">        // of the class by using getMethods </span><br><span class="line">        Method[] methods = cls.getMethods(); </span><br><span class="line">  </span><br><span class="line">        // Printing method names </span><br><span class="line">        for (Method method:methods) </span><br><span class="line">            System.out.println(method.getName()); </span><br><span class="line">  </span><br><span class="line">        // creates object of desired method by providing the </span><br><span class="line">        // method name and parameter class as arguments to </span><br><span class="line">        // the getDeclaredMethod </span><br><span class="line">        Method methodcall1 = cls.getDeclaredMethod(&quot;method2&quot;, </span><br><span class="line">                                                 int.class); </span><br><span class="line">  </span><br><span class="line">        // invokes the method at runtime </span><br><span class="line">        methodcall1.invoke(obj, 19); </span><br><span class="line">  </span><br><span class="line">        // creates object of the desired field by providing </span><br><span class="line">        // the name of field as argument to the  </span><br><span class="line">        // getDeclaredField method </span><br><span class="line">        Field field = cls.getDeclaredField(&quot;s&quot;); </span><br><span class="line">  </span><br><span class="line">        // allows the object to access the field irrespective </span><br><span class="line">        // of the access specifier used with the field </span><br><span class="line">        field.setAccessible(true); </span><br><span class="line">  </span><br><span class="line">        // takes object and the new value to be assigned </span><br><span class="line">        // to the field as arguments </span><br><span class="line">        field.set(obj, &quot;JAVA&quot;); </span><br><span class="line">  </span><br><span class="line">        // Creates object of desired method by providing the </span><br><span class="line">        // method name as argument to the getDeclaredMethod </span><br><span class="line">        Method methodcall2 = cls.getDeclaredMethod(&quot;method1&quot;); </span><br><span class="line">  </span><br><span class="line">        // invokes the method at runtime </span><br><span class="line">        methodcall2.invoke(obj); </span><br><span class="line">  </span><br><span class="line">        // Creates object of the desired method by providing </span><br><span class="line">        // the name of method as argument to the  </span><br><span class="line">        // getDeclaredMethod method </span><br><span class="line">        Method methodcall3 = cls.getDeclaredMethod(&quot;method3&quot;); </span><br><span class="line">  </span><br><span class="line">        // allows the object to access the method irrespective  </span><br><span class="line">        // of the access specifier used with the method </span><br><span class="line">        methodcall3.setAccessible(true); </span><br><span class="line">  </span><br><span class="line">        // invokes the method at runtime </span><br><span class="line">        methodcall3.invoke(obj); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Spring 2.5 introduced an annotation-based programming model for MVC controllers that uses annotations such as @RequestMapping, @RequestParam, @ModelAttribute, and so on. This annotation support is available for both Servlet MVC and Portlet MVC. Controllers implemented in this style do not have to extend specific base classes or implement specific interfaces. Furthermore, they do not usually have direct dependencies on Servlet or Portlet APIs, although you can easily configure access to Servlet or Portlet facilities.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class HelloWorldController &#123;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(&quot;/helloWorld&quot;)</span><br><span class="line">    public String helloWorld(Model model) &#123;</span><br><span class="line">        model.addAttribute(&quot;message&quot;, &quot;Hello World!&quot;);</span><br><span class="line">        return &quot;helloWorld&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Advantages-of-Using-Reflection"><a href="#Advantages-of-Using-Reflection" class="headerlink" title="Advantages of Using Reflection:"></a>Advantages of Using Reflection:</h2><ul>
-<li>Extensibility Features: An application may make use of external, user-defined classes by creating instances of extensibility objects using their fully-qualified names.</li>
-<li>Debugging and testing tools: Debuggers use the property of reflection to examine private members on classes.</li>
-</ul>
-<h2 id="Drawbacks"><a href="#Drawbacks" class="headerlink" title="Drawbacks:"></a>Drawbacks:</h2><ul>
-<li>Performance Overhead: Reflective operations have slower performance than their non-reflective counterparts, and should be avoided in sections of code which are called frequently in performance-sensitive applications.</li>
-<li>Exposure of Internals: Reflective code breaks abstractions and therefore may change behavior with upgrades of the platform.</li>
-</ul>
+<p>As you can see, the @Controller and @RequestMapping annotations allow flexible method names and signatures. In this particular example the method accepts a Model and returns a view name as a String, but various other method parameters and return values can be used as explained later in this section. @Controller and @RequestMapping and a number of other annotations form the basis for the Spring MVC implementation. This section documents these annotations and how they are most commonly used in a Servlet environment.</p>
+<h2 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="RequestMapping"></a>RequestMapping</h2><p>@RequestMapping can control the request path and request method.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public @interface RequestMapping &#123;</span><br><span class="line">    String[] value() default &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    RequestMethod[] method() default &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    String[] params() default &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    String[] headers() default &#123;&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>When we request hello.action the method would be hello(). Same in bye.action.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class HelloAction &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     *</span><br><span class="line">     * @RequestMapping </span><br><span class="line">     * @param model</span><br><span class="line">     * @return </span><br><span class="line">     * @throws Exception</span><br><span class="line">     */</span><br><span class="line">    @RequestMapping(value=&quot;/hello.action&quot;)</span><br><span class="line">    public String hello(Model model) throws Exception&#123;</span><br><span class="line">        System.out.println(&quot;HelloAction::hello()&quot;);</span><br><span class="line">        model.addAttribute(&quot;message&quot;,&quot;Hello&quot;);</span><br><span class="line">        return &quot;/index.jsp&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    @RequestMapping(value = &quot;/bye.action&quot;)</span><br><span class="line">    public String bye(Model model) throws Exception &#123;</span><br><span class="line">        model.addAttribute(&quot;message&quot;,&quot;Bye&quot;);</span><br><span class="line">        return &quot;/index.jsp&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If we want to create a multi module project, just add @RequestMapping above class.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">@RequestMapping(&quot;/module&quot;)</span><br><span class="line">public class HelloAction &#123;</span><br><span class="line"> ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If we only want to allow GET or POST methods to make request, just set the property of method.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(value = &quot;/bye.action&quot;,method = RequestMethod.POST)</span><br><span class="line">   public String bye(Model model) throws Exception &#123;</span><br><span class="line">       model.addAttribute(&quot;message&quot;, &quot;bye&quot;);</span><br><span class="line">       return &quot;/index.jsp&quot;;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -204,7 +194,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
         		</li>
       		
 		</ul>
@@ -223,18 +213,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/24/Java-Servlets/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java - Servlets
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/22/Enum-in-Java/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Enum in Java</div>
+    <a href="/2020/04/02/SpringMVC-Overview/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringMVC Overview</div>
       <i class="icon-circle-right"></i>
     </a>
   
